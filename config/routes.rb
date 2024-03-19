@@ -9,4 +9,16 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :users
+  resources :job_offers do
+    resources :cv_generations, only: [:new, :create]
+  end
+
+  resources :cv_generations, except: [:new, :create] do
+    resources :cvs, only: :create
+  end
+
+  resources :profiles, only: [:new, :show, :edit, :update, :create]
+  resources :cvs, only: :show
+  get "user/dashboard", to: "pages#dashboard"
 end

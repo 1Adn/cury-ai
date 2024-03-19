@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_19_100640) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_19_104847) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,48 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_19_100640) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "cv_generations", force: :cascade do |t|
+    t.text "template"
+    t.bigint "job_offer_id", null: false
+    t.bigint "profile_id", null: false
+    t.bigint "cv_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cv_id"], name: "index_cv_generations_on_cv_id"
+    t.index ["job_offer_id"], name: "index_cv_generations_on_job_offer_id"
+    t.index ["profile_id"], name: "index_cv_generations_on_profile_id"
+  end
+
+  create_table "cvs", force: :cascade do |t|
+    t.string "title"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cvs_on_user_id"
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string "title"
+    t.string "type"
+    t.string "field"
+    t.date "starting_date"
+    t.date "ending_date"
+    t.text "description"
+    t.bigint "profile_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["profile_id"], name: "index_experiences_on_profile_id"
+  end
+
+  create_table "job_offers", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_job_offers_on_user_id"
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -53,6 +95,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_19_100640) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "title"
+    t.string "level"
+    t.bigint "profile_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["profile_id"], name: "index_skills_on_profile_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -69,5 +120,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_19_100640) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "cv_generations", "cvs"
+  add_foreign_key "cv_generations", "job_offers"
+  add_foreign_key "cv_generations", "profiles"
+  add_foreign_key "cvs", "users"
+  add_foreign_key "experiences", "profiles"
+  add_foreign_key "job_offers", "users"
   add_foreign_key "profiles", "users"
+  add_foreign_key "skills", "profiles"
 end
