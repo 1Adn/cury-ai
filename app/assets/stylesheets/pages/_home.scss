@@ -1,1 +1,328 @@
 // Specific CSS for your home-page
+.hero-section {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+
+  .hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: #6200EE; // Replace with the actual color of the button
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#6200EE, 10%);
+    }
+  }
+}
+
+.h2-features{
+  background-color: #000;
+  color: white;
+  font-size: 1.3rem;
+  padding-left: 2rem;
+}
+
+.service-features {
+  background-color: #000; // Assuming a dark theme from the image
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0 0 30px 30px; // Arrondi seulement en bas à gauche et en bas à droite
+
+
+  .feature {
+    background-color: #333; // Dark background for the feature
+    color: #fff;
+    padding: 1.2rem;
+    border-radius: 20px;
+    width: 20%; // Adjust width as needed
+    margin: 0.5rem;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.resume-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  background-color: #f8f8f8; // or any color that matches your design
+}
+
+.resume-content {
+  max-width: 50%;
+}
+
+.resume-content h2 {
+  font-size: 3rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.resume-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.generate-button {
+  padding: 1rem 2rem;
+  background-color: #6200EE; // Use the color from your branding
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(#6200EE, 10%);
+  }
+}
+
+.resume-image {
+  max-width: 50%;
+  text-align: right;
+
+  img {
+    width: 70%;
+    height: auto;
+  }
+}
+
+.standout-section {
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, #f8f8f8, white);
+}
+
+.standout-heading {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Adjust the space between cards */
+
+  .card {
+    width: calc(33.333% - 2rem); /* Adjust width to account for gap */
+    background: #fff; /* Assuming a white card */
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+
+    .icon {
+      // Add styles for your icon here
+      margin-bottom: 3rem;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #666; /* Dark grey text color */
+      margin-bottom: 1rem;
+    }
+
+    .learn-more-link {
+      color: #6200EE; /* Use your brand color */
+      text-decoration: none;
+      font-weight: bold;
+      position: absolute; /* Position absolue pour le placer au bas de la carte */
+      bottom: 1rem; /* Distance du bas de la carte */
+      left: 50%; /* Démarre à 50% de la gauche */
+      transform: translateX(-50%); /* Centrer parfaitement en ajustant de la moitié de sa propre largeur */
+    }
+  }
+}
+
+.card .icon img {
+  width: 64px; /* Adjust this value to scale down the size of your icons */
+  height: auto; /* This will maintain the aspect ratio of the image */
+}
+
+.see-all-features-link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #6200EE; /* Use your brand color */
+  border: 2px solid #6200EE; /* Border color */
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.see-all-features-link:hover {
+  border: 2px solid #000000; /* Border color */
+  color: white;
+  background: linear-gradient(to right,#000000, #000000);
+}
+
+.testimonial-section {
+  text-align: center;
+  padding: 4rem 0;
+  background-color: #f0f0f0; // Assuming a light gray background
+  position: relative; // For absolute positioning of navigation arrows
+}
+
+.testimonial-heading h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-slider {
+  position: relative;
+  overflow: hidden; /* Cache les témoignages qui dépassent */
+  width: 100%; /* Largeur du conteneur des témoignages */
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 1rem auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.testimonial-image img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; // Circular image
+  margin-right: 1rem;
+}
+
+.testimonial-name {
+  font-weight: bold;
+}
+
+.testimonial-rating {
+  color: #FFD700; // Gold color for star rating
+}
+
+.testimonial-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.testimonial-prev,
+.testimonial-next {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: #000000; /* Or any color that matches your design */
+  color: #ffffff; /* Adjust the color to match your design */
+  padding: 1rem 0;
+  font-family: Arial, sans-serif; /* Use your preferred font */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%; /* Adjust padding and width according to your design */
+}
+
+.footer-brand a {
+  font-size: 1.5rem; /* Larger font size for the brand */
+  color: #ffffff; /* Adjust brand color */
+  text-decoration: none;
+}
+
+.footer-links a,
+.footer-socials a {
+  color: #ffffff; /* Adjust link color */
+  text-decoration: none;
+  margin-right: 1rem; /* Spacing between links */
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+  text-decoration: underline; /* Hover effect for links */
+}
+
+.footer-socials a {
+  font-size: 1.2rem; /* Adjust font size for social icons */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 10%; /* Adjust padding and width according to your design */
+  border-top: 1px solid #ccc; /* Light border for the bottom area */
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-policy a {
+  margin-right: 1rem; /* Spacing between policy links */
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+  .footer-content, .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links, .footer-socials, .footer-policy {
+    margin-bottom: 1rem;
+  }
+
+  .footer-links a,
+  .footer-socials a,
+  .footer-policy a {
+    margin-right: 0;
+    margin-bottom: 0.5rem; /* Add some space below each link on smaller screens */
+  }
+}

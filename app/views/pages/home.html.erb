@@ -1,3 +1,99 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to 'Log out', destroy_user_session_path %>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Cury AI<br>generate cv</h1>
+    <p>Discover a New Way to Generate CV with Artificial Intelligence</p>
+    <a href="#" class="cta-button">Start generating your CV !</a>
+  </div>
+</section>
+
+<div class="h2-features">Why Choose Our Service :</div>
+<section class="service-features">
+  <div class="feature">
+    <p>Seamless and intuitive user experience.</p>
+  </div>
+  <div class="feature">
+    <p>Ensure your resume stands out in competitive job market</p>
+  </div>
+  <div class="feature">
+    <p>Effortlessly create professional resumes in minutes</p>
+  </div>
+  <div class="feature">
+    <p>Ensure accuracy and consistency with our platform</p>
+  </div>
+</section>
+
+<section class="resume-section">
+  <div class="resume-content">
+    <h2>Say goodbye to hours spent perfecting your resume</h2>
+    <p>Let our artificial intelligence do the work for you.</p>
+    <a href="#" class="generate-button">Generate now</a>
+  </div>
+  <div class="resume-image">
+    <%= image_tag("image-cv.jpeg", alt: "AI Resume Illustration") %>
+  </div>
+</section>
+
+<section class="standout-section">
+  <h2 class="standout-heading"><strong>Ready to stand out?</strong></h2>
+  <div class="feature-cards">
+    <div class="card">
+      <div class="icon"> <%= image_tag("icone-home-resume.png")%></div>
+      <h3>Tailored Resumes</h3>
+      <p>Our AI adapts to your specific needs, generating a resume that perfectly aligns with your expertise.</p>
+      <a href="#" class="learn-more-link">Learn more</a>
+    </div>
+    <div class="card">
+      <div class="icon"><%= image_tag("icone-home-time.png")%></div>
+      <h3>Save Precious Time</h3>
+      <p>Create a resume in just a few clicks, without worrying about formatting or layout.</p>
+      <a href="#" class="learn-more-link">Learn more</a>
+    </div>
+    <div class="card">
+      <div class="icon"><%= image_tag("icone-home-recruiters.png")%></div>
+      <h3>Impress Recruiters</h3>
+      <p>Get a professional and compelling resume that sets you apart from the competition at first glance.</p>
+      <a href="#" class="learn-more-link">Learn more</a>
+    </div>
+  </div>
+  <a href="#" class="see-all-features-link">See all features</a>
+</section>
+
+<div id="homecarousel" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#homecarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#homecarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#homecarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+<div class="testimonial">
+      <blockquote>"I'm absolutely thrilled with my experience with Cury AI. Their revolutionary platform has truly streamlined and sped up the process of creating my CV. Thanks to their cutting-edge artificial intelligence, I was able to generate a professional and impactful resume in just minutes."</blockquote>
+      <div class="testimonial-footer">
+        <div class="testimonial-image"> <%= image_tag("customer-profil.png", alt: "Yannis Djaffer-Khodja") %></div>
+        <div class="testimonial-name">Yannis Djaffer-Khodja</div>
+        <div class="testimonial-rating">★★★★★</div>
+      </div>
+    </div>    </div>
+    <div class="carousel-item">
+        <div class="testimonial">
+        <blockquote>"The service provided by Cury AI was exceptional. The intuitive interface and guidance helped me to build a resume that stands out in a crowded market. I'm deeply impressed by how easy and fast the whole process was."</blockquote>
+        <div class="testimonial-footer">
+          <div class="testimonial-image"> <%= image_tag("customer-profil.png", alt: "John Doe") %></div>
+          <div class="testimonial-name">John Doe</div>
+          <div class="testimonial-rating">★★★★★</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev text-danger" type="button" data-bs-target="#homecarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#homecarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+

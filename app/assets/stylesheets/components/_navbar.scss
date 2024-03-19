@@ -1,12 +1,43 @@
-.navbar-lewagon {
+.navbar {
+  background-color: #000;
+  display: flex;
   justify-content: space-between;
-  background: white;
+  padding: 1rem 2rem;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5846FB;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar a {
+  text-decoration: none;
+}
+
+.signup-button {
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+  border: 1px solid #00BFFF; /* bright blue border */
+  border-radius: 30px; /* rounded corners */
+  padding: 10px 25px; /* top & bottom, left & right padding */
+  font-size: 16px; /* font size */
+  font-weight: bold; /* font weight */
+  text-transform: uppercase; /* uppercase text */
+  outline: none; /* remove outline */
+  cursor: pointer; /* cursor pointer */
+  transition: all 0.3s ease; /* smooth transition for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* shadow effect */
+}
+
+.signup-button:hover {
+  background: linear-gradient(to right,#8074ee, #5846FB);
+}
+
+.button-space {
+  margin-right: 15px; /* Ajustez la valeur pour obtenir l'espacement désiré */
+}
+
+.login-button {
+  color: white;
 }
