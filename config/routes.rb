@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   resources :profiles, only: [:new, :show, :edit, :update, :create]
   resources :cvs, only: :show
   get "user/dashboard", to: "pages#dashboard"
+  resources :skills, only: [:create, :update, :delete]
+  resources :experiences, only: [:create, :update, :delete]
 end

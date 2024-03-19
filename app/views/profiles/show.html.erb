@@ -1,0 +1,24 @@
+<div class ="container-show-profile">
+  <h1>Create your Profil :</h1>
+  <div class="card-show-profile">
+    <h1>Step 2 : Add all your skills</h1>
+    <div>
+      <p>Your First name : <%= @profile.first_name %></p>
+      <p>Your Last name : <%= @profile.last_name %></p>
+      <p>Your Address : <%= @profile.address %></p>
+      <p>Your Age : <%= @profile.age %></p>
+      <p>Your Phone number : <%= @profile.phone_number %></p>
+      <p>Your Email : <%= @profile.email %></p>
+      <p>Your Photo : <%= @profile.photo %></p>
+    </div>
+  </div>
+  <div>
+    <p>Skills :</p>
+    <%= simple_form_for(@skill) do |f| %>
+      <%= f.input :title, class: "input-new-skills" %>
+      <%= f.input :level, as: :select, collection: ["Junior (0-2 years)", "Experimented (2-5 years)", "Senior (5+ years)"], class: "input-new-skills" %>
+      <%= f.submit "Add", class: "btn btn-primary" %>
+    <% end %>
+    <div class="link-nostyle-new-skills"><%= link_to "<- Back", new_profile_path %> </div>
+  </div>
+</div>
