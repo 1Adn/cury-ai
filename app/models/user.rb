@@ -6,5 +6,4 @@ class User < ApplicationRecord
   has_many :cvs
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
 end
