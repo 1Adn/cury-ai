@@ -1,7 +1,9 @@
-<div class ="container-show-profile">
+<div data-controller="form" class ="container-all-form">
   <h1>Create your Profil :</h1>
-  <div class="card-show-profile">
-    <h1>Step 2 : Add all your skills</h1>
+  <div class="form-progression-bar">---> ------> -----> ------> ------> -----></div>
+  <%# =============================STEP 1=========================================== %>
+  <div class="container-step-1" data-form-target="step1">
+    <h1>Step 1 (got a profile)</h1>
     <div>
       <p>Your First name : <%= @profile.first_name %></p>
       <p>Your Last name : <%= @profile.last_name %></p>
@@ -11,14 +13,120 @@
       <p>Your Email : <%= @profile.email %></p>
       <p>Your Photo : <%= @profile.photo %></p>
     </div>
+    <button data-action="click->form#goStep2" class="btn btn-success">Next Step -></button>
   </div>
-  <div>
-    <p>Skills :</p>
-    <%= simple_form_for(@skill) do |f| %>
-      <%= f.input :title, class: "input-new-skills" %>
-      <%= f.input :level, as: :select, collection: ["Junior (0-2 years)", "Experimented (2-5 years)", "Senior (5+ years)"], class: "input-new-skills" %>
+  <%# ===============================STEP 2========================================= %>
+  <div class="container-step-2 d-none" data-form-target="step2">
+    <h1>Step 2 : Add your Degrees</h1>
+    <div class="step2-infos">
+      <% if @profile.degrees.present? %>
+        <% @profile.degrees.each do |degree| %>
+          <div class="step2-infos-details">
+            <p>Your Degree name : <%= degree.title %></p>
+            <p>Your Degree level : <%= degree.level %></p>
+            <p>Your Degree Field : <%= degree.field %></p>
+            <p>Your Degree's school : <%= degree.school %></p>
+          </div>
+          <p>-----------------------------------------------</p>
+        <% end %>
+      <% else %>
+        <div>No degrees</div>
+      <% end %>
+    </div>
+    <button data-action="click->form#showStep2Form" class="btn btn-primary">+ Add</button>
+    <div class="step2-form d-none" data-form-target="step2Form">
+      <p>Add you Degree :</p>
+      <%= simple_form_for(@degree) do |f| %>
+        <%= f.input :title, class: "input-new-profile" %>
+        <%= f.input :level, as: :select, collection: ["Bac", "Bac +2", "Bac +3", "Bac +5", "Doctora"], class: "input-new-profile" %>
+        <%= f.input :field, class: "input-new-profile" %>
+        <%= f.input :school, class: "input-new-profile" %>
+        <%= f.submit "Add", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    <button data-action="click->form#goStep3" class="btn btn-success">Next Step -></button>
+  </div>
+  <%# =================================STEP 3======================================= %>
+  <div class="container-step-3 d-none" data-form-target="step3">
+    <h1>Step 3 : Add your Skills & Languages</h1>
+    <div class="step3-infos">
+      <p>Languages :</p>
+      <% if @profile.languages.present? %>
+        <% @profile.languages.each do |language| %>
+          <div class="step2-infos-details">
+            <p>Your Language : <%= language.title %></p>
+            <p>Your Level : <%= language.level %></p>
+          </div>
+          <p>-----------------------------------------------</p>
+        <% end %>
+      <% else %>
+        <div>No Language</div>
+      <% end %>
+      <p>Skills :</p>
+      <% if @profile.skills.present? %>
+        <% @profile.skills.each do |skill| %>
+          <div class="step2-infos-details">
+            <p>Your Skill : <%= skill.title %></p>
+            <p>Your Level : <%= skill.level %></p>
+          </div>
+          <p>-----------------------------------------------</p>
+        <% end %>
+      <% else %>
+        <div>No Skills</div>
+      <% end %>
+    </div>
+    <button data-action="click->form#showStep2FormLanguage" class="btn btn-primary">+ Add Language</button>
+    <button data-action="click->form#showStep2FormSkill" class="btn btn-primary">+ Add Skill</button>
+    <div class="step3-form-language d-none" data-form-target="step2FormLanguage">
+      <%= simple_form_for(@language) do |f| %>
+        <%= f.input :title, class: "input-new-profile" %>
+        <%= f.input :level, as: :select, collection: [
+        "A1 (débutant absolu)",
+        "A2 (élémentaire)",
+        "B1 (intermédiaire)",
+        "B2 (intermédiaire avancé)",
+        "C1 (autonome)",
+        "C2 (maîtrise complète)"
+        ], class: "input-new-profile" %>
+        <%= f.submit "Add", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    <div class="step3-form-skill d-none" data-form-target="step2FormSkill">
+      <%= simple_form_for(@skill) do |f| %>
+        <%= f.input :title, class: "input-new-profile" %>
+        <%= f.input :level, as: :select, collection: ["Junior (0-2 years)", "Experimented (2-5 years)", "Senior (5+ years)"], class: "input-new-profile" %>
+        <%= f.submit "Add", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    <button data-action="click->form#goStep4" class="btn btn-success">Next Step -></button>
+  </div>
+  <%# ================================STEP¨4======================================== %>
+  <div class="container-step-4 d-none" data-form-target="step4">
+    <h1>Step 4 : Add your experiences</h1>
+    <p>Experiences :</p>
+    <%= simple_form_for(@experience) do |f| %>
+      <%= f.input :title, class: "input-new-profile" %>
+      <%= f.input :experience_type, as: :select, collection: [
+    "Professional Experience",
+    "Volunteer Experience",
+    "Education",
+    "Internships and Apprenticeships",
+    "Temporary or Contract Work Experience",
+    "Freelance Projects",
+    "Research Experience",
+    "Participation in Competitions or Contests",
+    "Professional Training",
+    "Association Experience",
+    "International Experience"
+    ], class: "input-new-profile" %>
+      <%= f.input :field, class: "input-new-profile" %>
+      <%= f.input :starting_date, class: "input-new-profile" %>
+      <%= f.input :ending_date, class: "input-new-profile" %>
+      <%= f.input :description, class: "input-new-profile" %>
       <%= f.submit "Add", class: "btn btn-primary" %>
     <% end %>
+    <button class="btn btn-success">Next Step -></button>
     <div class="link-nostyle-new-skills"><%= link_to "<- Back", new_profile_path %> </div>
   </div>
 </div>
+<%# ================================STEP 5======================================== %>

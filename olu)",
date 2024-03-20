@@ -1,0 +1,49 @@
+[1mdiff --git a/app/models/profile.rb b/app/models/profile.rb[m
+[1mindex 06899fe..76d89bf 100644[m
+[1m--- a/app/models/profile.rb[m
+[1m+++ b/app/models/profile.rb[m
+[36m@@ -4,6 +4,7 @@[m [mclass Profile < ApplicationRecord[m
+   has_many :skills[m
+   has_many :experiences[m
+   has_many :degrees[m
+[32m+[m[32m  has_many :languages[m
+   validates :first_name, presence: true[m
+   validates :last_name, presence: true[m
+   validates :address, presence: true[m
+[1mdiff --git a/db/schema.rb b/db/schema.rb[m
+[1mindex 16e993f..cd9fc7e 100644[m
+[1m--- a/db/schema.rb[m
+[1m+++ b/db/schema.rb[m
+[36m@@ -10,7 +10,7 @@[m
+ #[m
+ # It's strongly recommended that you check this file into your version control system.[m
+ [m
+[31m-ActiveRecord::Schema[7.1].define(version: 2024_03_20_112836) do[m
+[32m+[m[32mActiveRecord::Schema[7.1].define(version: 2024_03_20_115251) do[m
+   # These are extensions that must be enabled in order to support this database[m
+   enable_extension "plpgsql"[m
+ [m
+[36m@@ -95,6 +95,15 @@[m [mActiveRecord::Schema[7.1].define(version: 2024_03_20_112836) do[m
+     t.index ["user_id"], name: "index_job_offers_on_user_id"[m
+   end[m
+ [m
+[32m+[m[32m  create_table "languages", force: :cascade do |t|[m
+[32m+[m[32m    t.string "title"[m
+[32m+[m[32m    t.string "level"[m
+[32m+[m[32m    t.bigint "profile_id", null: false[m
+[32m+[m[32m    t.datetime "created_at", null: false[m
+[32m+[m[32m    t.datetime "updated_at", null: false[m
+[32m+[m[32m    t.index ["profile_id"], name: "index_languages_on_profile_id"[m
+[32m+[m[32m  end[m
+[32m+[m
+   create_table "profiles", force: :cascade do |t|[m
+     t.string "first_name"[m
+     t.string "last_name"[m
+[36m@@ -138,6 +147,7 @@[m [mActiveRecord::Schema[7.1].define(version: 2024_03_20_112836) do[m
+   add_foreign_key "degrees", "profiles"[m
+   add_foreign_key "experiences", "profiles"[m
+   add_foreign_key "job_offers", "users"[m
+[32m+[m[32m  add_foreign_key "languages", "profiles"[m
+   add_foreign_key "profiles", "users"[m
+   add_foreign_key "skills", "profiles"[m
+ end[m

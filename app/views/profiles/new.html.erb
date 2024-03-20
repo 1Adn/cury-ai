@@ -1,7 +1,7 @@
 <div class ="container-new-profile">
   <h1>Create your Profil :</h1>
   <div class="card-new-profile">
-    <h1>Step 1 :</h1>
+    <h1>Step 1 (got no profile):</h1>
     <%= simple_form_for(@profile) do |f| %>
       <%= f.input :first_name, class: "input-new-profile" %>
       <%= f.input :last_name, class: "input-new-profile" %>
@@ -10,7 +10,7 @@
       <%= f.input :phone_number, class: "input-new-profile" %>
       <%= f.input :email, class: "input-new-profile" %>
       <%= f.input :photo, as: :file, class: "input-new-profile" %>
-      <%= f.submit "Next Step", class: "btn btn-primary" %>
+      <%= f.submit "Next Step", class: "btn btn-success" %>
     <% end %>
     <div class="link-nostyle-new-profile"><%= link_to "<- Back", root_path %> </div>
   </div>

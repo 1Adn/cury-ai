@@ -1,9 +1,11 @@
 class Experience < ApplicationRecord
-  belongs_to :profile
+  belongs_to :profile, dependent: :destroy
   validates :title, presence: true
-  validates :type, inclusion: { in: [
+  validates :experience_type, presence: true
+  validates :experience_type, inclusion: { in: [
     "Professional Experience",
     "Volunteer Experience",
+    "Education",
     "Internships and Apprenticeships",
     "Temporary or Contract Work Experience",
     "Freelance Projects",
@@ -13,7 +15,7 @@ class Experience < ApplicationRecord
     "Association Experience",
     "International Experience"
   ] }
-  validates :field, prensence: true
+  validates :field, presence: true
   validates :starting_date, presence: true
   validates :ending_date, presence: true
   validates :description, presence: true
