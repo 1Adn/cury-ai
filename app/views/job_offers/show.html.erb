@@ -1,0 +1,8 @@
+<h1>Last job offer provided</h1>
+
+<h3>Title</h3>
+<%= @job_offer.title %>
+<h3>Description</h3>
+<%= @job_offer.description %>
+<%= link_to "Edit this job offer", edit_job_offer_path(@job_offer), class: 'btn btn-primary' %>
+<%= link_to 'Delete this job offer', job_offer_path(@job_offer), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
