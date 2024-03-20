@@ -1,6 +1,7 @@
 class Experience < ApplicationRecord
   belongs_to :profile
   validates :title, presence: true
+  validates :type, presence: true
   validates :type, inclusion: { in: [
     "Professional Experience",
     "Volunteer Experience",

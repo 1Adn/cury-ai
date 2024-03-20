@@ -3,6 +3,7 @@ class Profile < ApplicationRecord
   has_one_attached :photo
   has_many :skills
   has_many :experiences
+  has_many :degrees
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :address, presence: true
