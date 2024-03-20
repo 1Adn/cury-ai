@@ -4,6 +4,7 @@ class Profile < ApplicationRecord
   has_many :skills
   has_many :experiences
   has_many :degrees
+  has_many :languages
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :address, presence: true
