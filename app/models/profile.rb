@@ -1,5 +1,5 @@
 class Profile < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
   has_one_attached :photo
   has_many :skills
   has_many :experiences

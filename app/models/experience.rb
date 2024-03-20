@@ -4,6 +4,7 @@ class Experience < ApplicationRecord
   validates :type, inclusion: { in: [
     "Professional Experience",
     "Volunteer Experience",
+    "Education",
     "Internships and Apprenticeships",
     "Temporary or Contract Work Experience",
     "Freelance Projects",
@@ -13,7 +14,7 @@ class Experience < ApplicationRecord
     "Association Experience",
     "International Experience"
   ] }
-  validates :field, prensence: true
+  validates :field, presence: true
   validates :starting_date, presence: true
   validates :ending_date, presence: true
   validates :description, presence: true
