@@ -1,0 +1,8 @@
+<h1>Edit Job Offer</h1>
+
+<%= simple_form_for @job_offer do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.button :submit, "Update job offer !", class: 'btn btn-primary' %>
+<% end %>

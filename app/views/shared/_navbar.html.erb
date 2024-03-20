@@ -1,8 +1,19 @@
 <header class="navbar">
   <a href="/" class="brand-title">CuryAi</a>
   <nav>
-    <a href="/login" class="login-button">Log In</a>
+    <% if user_signed_in? %>
+      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'signout-button' %>
+    <% else %>
+      <%= link_to 'Log In', new_user_session_path, class: 'login-button' %>
+      <span class="button-space"></span>
+      <%= link_to 'Sign Up', new_user_registration_path, class: 'signup-button' %>
+    <% end %>
+
+
+
+
+    <%# <a href="/login" class="login-button">Log In</a>
     <span class="button-space"></span>
-    <a href="/signup" class="signup-button">Sign Up</a>
+    <a href="/signup" class="signup-button">Sign Up</a> %>
   </nav>
 </header>
