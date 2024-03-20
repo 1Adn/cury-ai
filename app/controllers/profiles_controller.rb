@@ -14,6 +14,8 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find(params[:id])
+    @degree = Degree.new
+    @language = Language.new
     @skill = Skill.new
     @experience = Experience.new
   end

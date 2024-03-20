@@ -23,4 +23,6 @@ Rails.application.routes.draw do
   get "user/dashboard", to: "pages#dashboard"
   resources :skills, only: [:create, :update, :delete]
   resources :experiences, only: [:create, :update, :delete]
+  resources :degrees, only: [:create, :update, :delete]
+  resources :languages, only: [:create, :update, :delete]
 end

@@ -1,8 +1,8 @@
 class Experience < ApplicationRecord
-  belongs_to :profile
+  belongs_to :profile, dependent: :destroy
   validates :title, presence: true
-  validates :type, presence: true
-  validates :type, inclusion: { in: [
+  validates :experience_type, presence: true
+  validates :experience_type, inclusion: { in: [
     "Professional Experience",
     "Volunteer Experience",
     "Education",

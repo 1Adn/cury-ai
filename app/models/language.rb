@@ -1,5 +1,5 @@
 class Language < ApplicationRecord
-  belongs_to :profile
+  belongs_to :profile, dependent: :destroy
   validates :title, presence: true
   validates :level, presence: true
   validates :level, inclusion: { in: [

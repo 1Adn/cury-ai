@@ -1,6 +1,6 @@
 class SkillsController < ApplicationController
   def create
-    @profile = Profile.last
+    @profile = current_user.profile
     @skill = Skill.new(params_skill)
     @skill.profile_id = @profile.id
     @skill.save!
