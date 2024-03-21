@@ -3,7 +3,11 @@ class LanguagesController < ApplicationController
     @profile = current_user.profile
     @language = Language.new(params_language)
     @language.profile_id = @profile.id
-    @language.save!
+    @language.save
+    respond_to do |format|
+      format.html { redirect_to profile_path }
+      format.json
+    end
   end
 
   private

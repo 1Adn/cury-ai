@@ -1,0 +1,11 @@
+<div class="step3-infos-language-details">
+  <% if @profile.languages.present? %>
+    <% @profile.languages.each do |language| %>
+      <p>Your language : <%= language.title %></p>
+      <p>Your level : <%= language.level %></p>
+      <p>-----------------------------------------------</p>
+    <% end %>
+  <% else %>
+    <div>No languages</div>
+  <% end %>
+</div>

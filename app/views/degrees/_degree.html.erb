@@ -1,0 +1,13 @@
+<div class="step2-infos-details">
+  <% if @profile.degrees.present? %>
+    <% @profile.degrees.each do |degree| %>
+      <p>Your Degree name : <%= degree.title %></p>
+      <p>Your Degree level : <%= degree.level %></p>
+      <p>Your Degree Field : <%= degree.field %></p>
+      <p>Your Degree's school : <%= degree.school %></p>
+      <p>-----------------------------------------------</p>
+    <% end %>
+  <% else %>
+    <div>No degrees</div>
+  <% end %>
+</div>
