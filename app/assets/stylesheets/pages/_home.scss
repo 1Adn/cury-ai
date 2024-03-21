@@ -326,3 +326,38 @@
     margin-bottom: 0.5rem; /* Add some space below each link on smaller screens */
   }
 }
+
+.carousel-item {
+  background-color: white;
+}
+.testimonial {
+  background: #000; /* arrière-plan noir */
+  color: #fff; /* texte blanc */
+  padding: 20px; /* espace intérieur pour le padding */
+  border-radius: 10px; /* bords arrondis */
+  position: relative; /* pour positionner les éléments absolument à l'intérieur */
+  margin: auto; /* pour centrer dans le carousel */
+  max-width: 600px; /* largeur maximale du témoignage */
+  text-align: left; /* alignement du texte à gauche */
+}
+
+.testimonial blockquote {
+  font-size: 1.2rem; /* taille de la police du bloc de citation */
+  line-height: 1.5; /* espacement des lignes */
+  position: relative; /* position relative pour les pseudo-éléments */
+  padding: 20px; /* espace intérieur pour le padding */
+  margin: 0; /* annuler la marge par défaut du navigateur */
+  color: white;
+}
+
+.testimonial blockquote::after {
+  content: open-quote; /* utilise les guillemets par défaut */
+  font-size: 5rem; /* grande taille pour les guillemets */
+  position: absolute; /* positionnement absolu */
+  color: rgba(255, 255, 255, 0.5); /* couleur blanche translucide pour les guillemets */
+}
+
+.testimonial-rating {
+  font-size: 1.5rem; 
+  padding: 1rem;
+}

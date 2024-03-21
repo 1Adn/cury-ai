@@ -1,0 +1,197 @@
+.banner-new-profile {
+  background-color: #000; /* Set the background color to black or any color you prefer */
+  color: #fff; /* Set the text color to white for contrast */
+  padding: 2rem; /* Add some padding */
+  text-align: center; /* Center the text */
+  border-radius: 0 0 30px 30px; // Arrondi seulement en bas à gauche et en bas à droite
+  margin-bottom: 2rem;
+}
+
+.banner-content-new-profile h1 {
+  font-size: 2.5rem; /* Larger font size for the main title */
+  margin-bottom: 2rem; /* Space below the title */
+}
+
+.banner-content-new-profile p {
+  font-size: 1rem; /* Adjust the font size for the paragraph */
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.complet-profile-banner {
+  text-align: center; /* Centrer le texte horizontalement */
+  padding: 20px; /* Espace intérieur pour la bannière */
+  margin-top: 20px; /* Espace au-dessus de la bannière si nécessaire */
+  border-radius: 5px; /* Bords arrondis pour la bannière */
+}
+
+.complet-profile-banner h2 {
+font-size: 24px; /* Taille de police pour le titre */
+font-weight: bold;
+margin-bottom: 15px; /* Espace sous le titre */
+color: #333; /* Couleur de police pour le titre */
+}
+
+.complet-profile-banner p {
+color: #6F6C90; /* Couleur de police pour le paragraphe */
+max-width: 600px; /* Largeur maximale pour le paragraphe */
+margin: 0 auto; /* Centrer le paragraphe */
+line-height: 1.5; /* Hauteur de ligne pour le paragraphe */
+}
+
+.container-new-profile {
+  border: 1px solid #6200EE; /* The color of the border */
+  max-width: 600px; /* Adjust the width of the container */
+  margin: 20px auto; /* Center the container on the page */
+  padding: 20px;
+  background: #FFF; /* Background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for card effect */
+}
+
+
+.form-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-instruction {
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px; /* Space between form groups */
+}
+
+.input-new-profile {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+}
+
+.input-icon {
+  position: absolute;
+  width: 30px;
+  right: 10px; /* or adjust as needed */
+  top: 72%;
+  transform: translateY(-50%);
+  /* Add actual icon styles here */
+}
+
+.button-container {
+  display: flex; /* Use flexbox to align elements */
+  justify-content: space-between; /* Space out the buttons */
+  align-items: center; /* Align buttons vertically */
+  gap: 10px; /* Add space between buttons */
+}
+
+.btn-next-step {
+  display: inline-block; /* Change to inline-block for better control over padding and margins */
+  background-color: #6200EE; /* Use color from your screenshot */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px; /* Fully rounded corners for buttons */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.5s; /* Smooth transition for hover effect */
+}
+
+
+.btn-next-step:hover {
+  background-color: #099928; /* Darker shade on hover */
+}
+
+.btn-back {
+  display: inline-block; /* Change to inline-block for better control over padding and margins */
+  text-decoration: none;
+  color: #333; /* This is the text color */
+  background-color: #fff; /* Change this to match your design, if needed */
+  border: 2px solid #6200EE; /* The color of the border */
+  padding: 10px 20px; /* Adjust padding to control the size of the button */
+  font-size: 16px; /* Adjust the font size as needed */
+  border-radius: 25px; /* This gives you the fully rounded ends */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-back:hover {
+  background-color: #6200EE; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  text-decoration: none; /* Ensures that no underline appears on hover */
+}
+
+/* progress bar */
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between; /* Assure un espacement égal entre les étapes */
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step {
+  display: flex;
+  flex-direction: column; /* Empile les éléments verticalement */
+  align-items: center;
+  position: relative;
+  width: 115px;
+  height: 56px;
+}
+
+.step span {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #6200EE; /* La couleur de la bordure pour les étapes non actives */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* Fond blanc pour les cercles */
+  color: #6200EE; /* Couleur du texte pour les étapes non actives */
+  font-weight: bold; /* Texte en gras */
+}
+
+.step.active span {
+  background-color: #6200EE;
+  color: #fff;
+}
+
+.step p {
+  margin: 0; /* Enlève la marge par défaut des paragraphes */
+  padding-top: 5px; /* Espacement entre le span et le paragraphe */
+  color: #000000; /* Couleur du texte pour les titres */
+  font-size: 14px; /* Ajustez la taille de la police si nécessaire */
+}
+
+.step:not(:first-child)::before {
+  content: ''; /* Nécessaire pour les pseudos-éléments */
+  position: absolute;
+  top: 15px; /* À ajuster pour centrer par rapport à la hauteur de votre span */
+  left: -50%; /* Démarre à la moitié du chemin du span précédent */
+  width: 100%; /* Assurez-vous que la ligne s'étend jusqu'au span suivant */
+  height: 2px; /* L'épaisseur de votre ligne */
+  background-color: #6200EE; /* La couleur de la ligne */
+  z-index: -1;
+}
+
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 15px; /* Identique à ::before pour l'alignement vertical */
+  right: -50%; /* Cette fois, nous démarrons à la moitié du chemin vers le span suivant */
+  width: 100%;
+  height: 2px;
+  background-color: #6200EE;
+  z-index: -1;
+}
