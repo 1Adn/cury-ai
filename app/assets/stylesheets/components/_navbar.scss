@@ -41,3 +41,38 @@
 .login-button {
   color: white;
 }
+
+.profile-icon {
+  cursor: pointer;
+  width: 50px; /* ou la taille que vous préférez */
+  height: 50px;
+  border-radius: 50%; /* pour un cercle parfait */
+}
+
+/* Conteneur pour le contenu déroulant */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Contenu du menu déroulant caché par défaut */
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Liens à l'intérieur du menu déroulant */
+.dropdown-link {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Affichage du menu déroulant lors du survol */
+.dropdown:hover .dropdown-content {
+  display: block;
+}

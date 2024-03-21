@@ -2,7 +2,13 @@
   <a href="/" class="brand-title">CuryAi</a>
   <nav>
     <% if user_signed_in? %>
-      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'signout-button' %>
+    <div class="dropdown">
+      <%= image_tag("profile-projet.png", alt: "Profile", class: "profile-icon") %>
+      <div class="dropdown-content">
+        <%= link_to 'Dashboard', "dashboard_path", class: 'dropdown-link' %>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'dropdown-link' %>
+      </div>
+    </div>
     <% else %>
       <%= link_to 'Log In', new_user_session_path, class: 'login-button' %>
       <span class="button-space"></span>
