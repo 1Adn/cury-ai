@@ -1,6 +1,6 @@
 class Profile < ApplicationRecord
-  belongs_to :user, dependent: :destroy
-  has_one_attached :photo
+  belongs_to :user
+  has_one_attached :photo, dependent: :destroy
   has_many :skills, dependent: :destroy
   has_many :experiences, dependent: :destroy
   has_many :degrees, dependent: :destroy

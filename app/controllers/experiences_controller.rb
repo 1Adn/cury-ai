@@ -3,7 +3,11 @@ class ExperiencesController < ApplicationController
     @profile = current_user.profile
     @experience = Experience.new(params_experience)
     @experience.profile_id = @profile.id
-    @experience.save!
+    @experience.save
+    respond_to do |format|
+      format.html { redirect_to profile_path }
+      format.json
+    end
   end
 
   private

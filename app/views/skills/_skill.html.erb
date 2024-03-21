@@ -1,0 +1,11 @@
+<div class="step3-infos-skill-details">
+  <% if @profile.skills.present? %>
+    <% @profile.skills.each do |skill| %>
+      <p>Your skill : <%= skill.title %></p>
+      <p>Your level : <%= skill.level %></p>
+      <p>-----------------------------------------------</p>
+    <% end %>
+  <% else %>
+    <div>No Skills</div>
+  <% end %>
+</div>

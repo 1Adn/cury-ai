@@ -1,5 +1,5 @@
 class Experience < ApplicationRecord
-  belongs_to :profile, dependent: :destroy
+  belongs_to :profile
   validates :title, presence: true
   validates :experience_type, presence: true
   validates :experience_type, inclusion: { in: [

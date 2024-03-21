@@ -1,0 +1,14 @@
+<div class="step4-infos-details">
+  <% if @profile.experiences.present? %>
+    <% @profile.experiences.each do |experience| %>
+      <p>Your experience name : <%= experience.title %></p>
+      <p>Your experience type : <%= experience.experience_type %></p>
+      <p>Your experience Started  : <%= experience.starting_date %></p>
+      <p>Your experience Ended : <%= experience.ending_date %></p>
+      <p>Your experience description : <%= experience.description %></p>
+      <p>-----------------------------------------------</p>
+    <% end %>
+  <% else %>
+    <div>No Experiences</div>
+  <% end %>
+</div>
