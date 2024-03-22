@@ -1,14 +1,25 @@
 <div class="step4-infos-details">
+  <div class="accordion" id="experienceAccordion">
   <% if @profile.experiences.present? %>
-    <% @profile.experiences.each do |experience| %>
-      <p>Your experience name : <%= experience.title %></p>
-      <p>Your experience type : <%= experience.experience_type %></p>
-      <p>Your experience Started  : <%= experience.starting_date %></p>
-      <p>Your experience Ended : <%= experience.ending_date %></p>
-      <p>Your experience description : <%= experience.description %></p>
-      <p>-----------------------------------------------</p>
+    <% @profile.experiences.each_with_index do |experience, index| %>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingExperience<%= index %>">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExperience<%= index %>" aria-expanded="false" aria-controls="collapseExperience<%= index %>">
+            Experience <%= index + 1 %>: <%= experience.title %>
+          </button>
+        </h2>
+        <div id="collapseExperience<%= index %>" class="accordion-collapse collapse" aria-labelledby="headingExperience<%= index %>" data-bs-parent="#experienceAccordion">
+          <div class="accordion-body">
+            <strong>Type:</strong> <%= experience.experience_type %><br>
+            <strong>Started:</strong> <%= experience.starting_date %><br>
+            <strong>Ended:</strong> <%= experience.ending_date %><br>
+            <strong>Description:</strong> <%= experience.description %>
+          </div>
+        </div>
+      </div>
     <% end %>
   <% else %>
-    <div>No Experiences</div>
+    <div class="no-experience-message">No Experiences</div>
   <% end %>
+</div>
 </div>

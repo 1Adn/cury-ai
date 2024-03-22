@@ -90,7 +90,7 @@
 }
 
 .btn-add-skills {
-  background-color: #6200EE; /* The primary purple color */
+  background-color: #6300ed; /* The primary purple color */
   color: #FFFFFF; /* White text */
   border: none; /* No border */
   padding: 10px 20px; /* Vertical and horizontal padding */
@@ -219,12 +219,84 @@ border-radius: 5px;
   cursor: pointer; /* Change cursor to pointer */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   transition: background-color 0.3s; /* Smooth transition for hover effect */
+  margin-right: 3rem;
 }
 
 .btn-add-language:hover {
-  background-color: #7A4EAE; /* Slightly darker purple on hover */
+  background-color: #2403b3; /* Slightly darker purple on hover */
 }
 
 .btn-add-language:focus {
   outline: none; /* Remove outline on focus for cleaner look */
+}
+
+.btn-skill-et-language {
+  padding-bottom: 1rem;
+  display: flex; /* Utilisation de flexbox */
+  justify-content: center; /* Centrer les éléments horizontalement */
+  align-items: center; /* Centrer les éléments verticalement */
+
+}
+
+
+/* ========STEP 4======= */
+
+.container-step-4 {
+  padding-top: 2rem;
+}
+
+.step-4-card {
+  background-color: #FFFFFF; /* Assuming you want a white background */
+  border: 1px solid #6200EE; /* The color of the border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2rem; /* Spacing inside the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.séparateur-btn-exepriences {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex; /* Utilisation de flexbox */
+  justify-content: center; /* Centrer les éléments horizontalement */
+  align-items: center; /* Centrer les éléments verticalement */
+}
+
+
+/* ========STEP 5======= */
+
+
+.step-5-card {
+  background-color: #FFFFFF; /* Assuming you want a white background */
+  border: 1px solid #6200EE; /* The color of the border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2rem; /* Spacing inside the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.btn-save-job-offer {
+  background-color: #6200EE; /* Change this to match your primary color */
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+  transition: all 0.3s ease;
+}
+
+.btn-save-job-offer:hover,
+.btn-save-job-offer:focus {
+  background-color: #4500cb; /* A darker shade for hover state */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px); /* Slight lift */
+}
+
+.btn-save-job-offer:active {
+  transform: translateY(1px); /* Pressed down effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
