@@ -107,8 +107,20 @@
         <%= f.submit "Confirm", class: "btn btn-primary" %>
       <% end %>
     </div>
-    <button class="btn btn-success">Next Step -></button>
+    <button data-action="click->form#goStep5" class="btn btn-success">Next Step -></button>
     <div class="link-nostyle-new-skills"><%= link_to "<- Back", new_profile_path %> </div>
   </div>
+  <%# ================================STEP 5======================================== %>
+  <div class="container-step-5 d-none" data-form-target="step5">
+    <h1>Step 5 : Add your Job offer</h1>
+    <%# ===============================FORM========================================= %>
+    <div class="step5-form" data-form-target="step5Box">
+      <p>Add you Job Offfer :</p>
+      <%= simple_form_for @job_offer do |f| %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.button :submit, "Save job offer !", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
 </div>
-<%# ================================STEP 5======================================== %>
