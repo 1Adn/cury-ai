@@ -4,67 +4,66 @@
     <p>Welcome to Step 1 of our AI's CV Generator! This is where you lay the foundation for your professional CV. Please fill out the form below with your essential details, including your first name, last name, address, age, phone number, email, and attach a photo if desired. Your profile information will be used to create a personalized resume that showcases your skills and experience effectively. Let's get started on crafting your perfect CV!</p>
   </div>
 </div>
-
 <div class="progress-bar">
   <div class="steps">
-    <div class="step active"><span>01</span> <p>Profile</p></div>
-    <div class="step"><span>02</span> <p>Skills</p></div>
-    <div class="step"><span>03</span> <p>Education</p></div>
-    <div class="step"><span>04</span> <p>Work Experience</p></div>
-    <div class="step"><span>05</span> <p>Job offer</p></div>
-    <div class="step"><span>06</span> <p>Generate CV</p></div>
+    <div class="step active"><span>01</span> 
+      <p>Profile</p>
+    </div>
+    <div class="step"><span>02</span> 
+      <p>Skills</p>
+    </div>
+    <div class="step"><span>03</span> 
+      <p>Education</p>
+    </div>
+    <div class="step"><span>04</span> 
+      <p>Work Experience</p>
+    </div>
+    <div class="step"><span>05</span> 
+      <p>Job offer</p>
+    </div>
+    <div class="step"><span>06</span> 
+      <p>Generate CV</p>
+    </div>
   </div>
 </div>
-
 <div class="complet-profile-banner">
   <h2>Complete your profile</h2>
   <p>Please complete the following fields to provide us with essential information for crafting your professional resume. Your details will be used to personalize your CV and make it stand out to potential employers. Let's begin by filling out your profile!</p>
 </div>
-
 <div class ="container-new-profile">
-    <h2 class="form-title">Contact details</h2>
-    <p class="form-instruction">Complete your informations profile below. </p>
-
+  <h2 class="form-title">Contact details</h2>
+  <p class="form-instruction">Complete your informations profile below. </p>
   <div class="card-new-profile">
     <%= simple_form_for(@profile) do |f| %>
-
-    <div class="form-group">
-      <%= f.input :first_name, placeholder: 'Martin', input_html: { class: 'input-new-profile' } %>
-      <%= image_tag('icone-name.png', alt: 'User icon', class: 'input-icon') %>
-    </div>
-
-    <div class="form-group">
-      <%= f.input :last_name, placeholder: 'Cabanié', input_html: { class: 'input-new-profile' } %>
-      <%= image_tag('icone-name.png', alt: 'User icon', class: 'input-icon') %>
-    </div>
-
-    <div class="form-group">
-      <%= f.input :address, placeholder: '8 rue de la Rousselle, 33000, Bordeaux, France', input_html: { class: 'input-new-profile' } %>
-      <%= image_tag('icone-adress.png', alt: 'User icon', class: 'input-icon') %>
-    </div>
-
-    <div class="form-group">
-      <%= f.input :age, placeholder: 'jj/mm/yyyy', input_html: { class: 'input-new-profile' } %>
-      <%= image_tag('icone-age.png', alt: 'User icon', class: 'input-icon') %>
-    </div>
-
-    <div class="form-group">
-      <%= f.input :phone_number, placeholder: '+33 6 54 67 89 56', input_html: { class: 'input-new-profile' } %>
-      <%= image_tag('icone-phone-number.png', alt: 'User icon', class: 'input-icon') %>
-    </div>
-
-    <div class="form-group">
-      <%= f.input :email, placeholder: 'martincabanie@gmail.com', input_html: { class: 'input-new-profile' } %>
-      <%= image_tag('icone-email.png', alt: 'User icon', class: 'input-icon') %>
-     </div>
-
-     <%= f.input :photo, as: :file, input_html: { class: 'input-new-profile' } %>
-
-    <div class="button-container">
-    <%= link_to "Back", root_path, class: 'btn-back' %>
-      <%= f.submit "Next Step", class: 'btn-next-step' %>
-    </div>
-
+      <div class="form-group">
+        <%= f.input :first_name, placeholder: 'Martin', input_html: { class: 'input-new-profile' } %>
+        <%= image_tag('icone-name.png', alt: 'User icon', class: 'input-icon') %>
+      </div>
+      <div class="form-group">
+        <%= f.input :last_name, placeholder: 'Cabanié', input_html: { class: 'input-new-profile' } %>
+        <%= image_tag('icone-name.png', alt: 'User icon', class: 'input-icon') %>
+      </div>
+      <div class="form-group">
+        <%= f.input :address, placeholder: '8 rue de la Rousselle, 33000, Bordeaux, France', input_html: { class: 'input-new-profile' } %>
+        <%= image_tag('icone-adress.png', alt: 'User icon', class: 'input-icon') %>
+      </div>
+      <div class="form-group">
+        <%= f.input :age, placeholder: '22', input_html: { class: 'input-new-profile' } %>
+        <%= image_tag('icone-age.png', alt: 'User icon', class: 'input-icon') %>
+      </div>
+      <div class="form-group">
+        <%= f.input :phone_number, placeholder: '+33 6 54 67 89 56', input_html: { class: 'input-new-profile' } %>
+        <%= image_tag('icone-phone-number.png', alt: 'User icon', class: 'input-icon') %>
+      </div>
+      <div class="form-group">
+        <%= f.input :email, placeholder: 'martincabanie@gmail.com', input_html: { class: 'input-new-profile' } %>
+        <%= image_tag('icone-email.png', alt: 'User icon', class: 'input-icon') %>
+      </div>
+      <%= f.input :photo, as: :file, input_html: { class: 'input-new-profile' } %>
+      <div class="button-container">
+        <%= link_to "Back", root_path, class: 'btn-back' %>
+        <%= f.submit "Next Step", class: 'btn-next-step' %>
+      </div>
     <% end %>
   </div>
 </div>
