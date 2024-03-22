@@ -18,6 +18,7 @@ class ProfilesController < ApplicationController
     @language = Language.new
     @skill = Skill.new
     @experience = Experience.new
+    @job_offer = JobOffer.new
   end
 
   private
