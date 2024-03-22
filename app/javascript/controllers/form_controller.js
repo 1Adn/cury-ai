@@ -20,18 +20,22 @@ export default class extends Controller {
     this.step3Target.classList.add("d-none");
     this.step4Target.classList.remove("d-none");
   }
+  goStep5() {
+    this.step4Target.classList.add("d-none");
+    this.step5Target.classList.remove("d-none");
+  }
   showStep2Form() {
-    this.step2BoxTarget.classList.remove("d-none")
-    this.step2ButtonAddFormTarget.classList.add("d-none")
+    this.step2BoxTarget.classList.remove("d-none");
+    this.step2ButtonAddFormTarget.classList.add("d-none");
   }
   showStep3FormLanguage() {
-    this.step3BoxLanguageTarget.classList.remove("d-none")
+    this.step3BoxLanguageTarget.classList.remove("d-none");
   }
   showStep3FormSkill() {
-    this.step3BoxSkillTarget.classList.remove("d-none")
+    this.step3BoxSkillTarget.classList.remove("d-none");
   }
   showStep4Form() {
-    this.step4BoxTarget.classList.remove("d-none")
+    this.step4BoxTarget.classList.remove("d-none");
   }
 
   updateStep2Infos(event) {
@@ -45,8 +49,8 @@ export default class extends Controller {
       .then((data) => {
         console.log(data);
         this.step2InfosTarget.innerHTML = data.inserted_item;
-        this.step2ButtonAddFormTarget.classList.remove("d-none")
-        this.step2BoxTarget.classList.add("d-none")
+        this.step2ButtonAddFormTarget.classList.remove("d-none");
+        this.step2BoxTarget.classList.add("d-none");
         this.step2FormTarget.reset();
       })
   }
@@ -62,8 +66,8 @@ export default class extends Controller {
       .then((data) => {
         console.log(data);
         this.step3InfosLanguageTarget.innerHTML = data.inserted_item;
-        this.step3ButtonAddFormLanguageTarget.classList.remove("d-none")
-        this.step3BoxLanguageTarget.classList.add("d-none")
+        this.step3ButtonAddFormLanguageTarget.classList.remove("d-none");
+        this.step3BoxLanguageTarget.classList.add("d-none");
         this.step3FormLanguageTarget.reset();
       })
   }
@@ -78,8 +82,8 @@ export default class extends Controller {
       .then((data) => {
         console.log(data);
         this.step3InfosSkillTarget.innerHTML = data.inserted_item;
-        this.step3ButtonAddFormSkillTarget.classList.remove("d-none")
-        this.step3BoxSkillTarget.classList.add("d-none")
+        this.step3ButtonAddFormSkillTarget.classList.remove("d-none");
+        this.step3BoxSkillTarget.classList.add("d-none");
         this.step3FormSkillTarget.reset();
       })
   }
@@ -95,8 +99,8 @@ export default class extends Controller {
       .then((data) => {
         console.log(data);
         this.step4InfosTarget.innerHTML = data.inserted_item;
-        this.step4ButtonAddFormTarget.classList.remove("d-none")
-        this.step4BoxTarget.classList.add("d-none")
+        this.step4ButtonAddFormTarget.classList.remove("d-none");
+        this.step4BoxTarget.classList.add("d-none");
         this.step4FormTarget.reset();
       })
   }

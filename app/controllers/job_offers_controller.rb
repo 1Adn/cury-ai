@@ -1,9 +1,4 @@
 class JobOffersController < ApplicationController
-
-  def new
-    @job_offer = JobOffer.new
-  end
-
   def create
     @job_offer = JobOffer.new(job_offer_params)
     @job_offer.user = current_user
@@ -16,6 +11,8 @@ class JobOffersController < ApplicationController
 
   def show
     @job_offer = JobOffer.find(params[:id])
+    @cv_generation = CvGeneration.new
+    @cv_generation.job_offer_id = @job_offer.id
   end
 
   def edit
@@ -34,12 +31,12 @@ class JobOffersController < ApplicationController
   def destroy
     @job_offer = JobOffer.find(params[:id])
     @job_offer.destroy
-    redirect_to  new_job_offer_path, notice: 'Job offer has been deleted successfully!'
+    redirect_to new_job_offer_path, notice: 'Job offer has been deleted successfully!'
   end
 
   private
 
-    def job_offer_params
-      params.require(:job_offer).permit(:title, :description)
-    end
+  def job_offer_params
+    params.require(:job_offer).permit(:title, :description)
+  end
 end
