@@ -1,82 +1,214 @@
 <div data-controller="form" class ="container-all-form">
-  <h1>Create your Profil :</h1>
-  <div class="form-progression-bar">---> ------> -----> ------> ------> -----></div>
   <%# =============================STEP 1=========================================== %>
   <div class="container-step-1" data-form-target="step1">
-    <h1>Step 1 (got a profile)</h1>
-    <div>
-      <p>Your First name : <%= @profile.first_name %></p>
-      <p>Your Last name : <%= @profile.last_name %></p>
-      <p>Your Address : <%= @profile.address %></p>
-      <p>Your Age : <%= @profile.age %></p>
-      <p>Your Phone number : <%= @profile.phone_number %></p>
-      <p>Your Email : <%= @profile.email %></p>
-      <p>Your Photo : <%= @profile.photo %></p>
+
+    <div class="progress-bar">
+      <div class="steps">
+        <div class="step step-active"><span>01</span>
+          <p>Profile</p>
+        </div>
+        <div class="step"><span>02</span>
+          <p>Education</p>
+        </div>
+        <div class="step"><span>03</span>
+          <p>Skills</p>
+        </div>
+        <div class="step"><span>04</span>
+          <p>Work Experience</p>
+        </div>
+        <div class="step"><span>05</span>
+          <p>Job offer</p>
+        </div>
+        <div class="step"><span>06</span>
+          <p>Generate CV</p>
+        </div>
+      </div>
     </div>
-    <button data-action="click->form#goStep2" class="btn btn-success">Next Step -></button>
+
+    <div class="step-1-information">
+      <div class="complet-profile-banner">
+        <h2>Verify Your Profile Information</h2>
+        <p>Before proceeding, please review the information provided below to ensure its accuracy.</p>
+      </div>
+      <div class="recap-profil-info">
+        <p> <strong> Your First name : </strong> <%= @profile.first_name %></p>
+        <p> <strong> Your Last name : </strong> <%= @profile.last_name %></p>
+        <p> <strong> Your Address : </strong> <%= @profile.address %></p>
+        <p> <strong> Your Age : </strong> <%= @profile.age %></p>
+        <p> <strong> Your Phone number :</strong> <%= @profile.phone_number %></p>
+        <p> <strong> Your Email : </strong> <%= @profile.email %></p>
+        <p> <strong> Your Photo :</strong> <%= @profile.photo %></p>
+      </div>
+      <div class="button-container">
+        <%= link_to 'Back', new_profile_path, class: 'btn btn-back' %>
+        <button data-action="click->form#goStep2" class="btn-next-step">Confirm</button>
+      </div>
+    </div>
+
   </div>
+
+
   <%# ===============================STEP 2========================================= %>
+
+
   <div class="container-step-2 d-none" data-form-target="step2">
-    <h1>Step 2 : Add your Degrees</h1>
-    <%# ===============================AFFICHAGE DES DONNEES========================================= %>
-    <div class="step2-infos" data-form-target="step2Infos">
-      <%= render "degrees/degree", degree: @degree %>
+
+  <div class="progress-bar">
+        <div class="steps">
+          <div class="step step-active"><span>01</span>
+            <p>Profile</p>
+          </div>
+          <div class="step step-active"><span>02</span>
+            <p>Education</p>
+          </div>
+          <div class="step"><span>03</span>
+            <p>Skills</p>
+          </div>
+          <div class="step"><span>04</span>
+            <p>Work Experience</p>
+          </div>
+          <div class="step"><span>05</span>
+            <p>Job offer</p>
+          </div>
+          <div class="step"><span>06</span>
+            <p>Generate CV</p>
+          </div>
+        </div>
     </div>
-    <button data-action="click->form#showStep2Form" data-form-target="step2ButtonAddForm" class="btn btn-primary">+ Add</button>
-    <%# ===============================FORM========================================= %>
-    <div class="step2-form d-none" data-form-target="step2Box">
-      <p>Add you Degree :</p>
-      <%= simple_form_for(@degree, data: { action: "submit->form#updateStep2Infos",
-      form_target: "step2Form" }) do |f| %>
-        <%= f.input :title, class: "input-new-profile" %>
-        <%= f.input :level, as: :select, collection: ["Bac", "Bac +2", "Bac +3", "Bac +5", "Doctora"], class: "input-new-profile" %>
-        <%= f.input :field, class: "input-new-profile" %>
-        <%= f.input :school, class: "input-new-profile" %>
-        <%= f.submit "Confirm", class: "btn btn-primary" %>
-      <% end %>
+
+    <div class="step-2-card">
+      <div class="complet-profile-banner">
+        <h2>Add Your Degree</h2>
+        <p>Enter your academic qualifications to enhance your CV. Fill in the details of your degrees, diplomas, and certifications to showcase your educational achievements.</p>
+      </div>
+      <%# ===============================AFFICHAGE DES DONNEES========================================= %>
+      <div class="step2-infos" data-form-target="step2Infos">
+        <%= render "degrees/degree", degree: @degree %>
+      </div>
+      <div class="container-boutton-add-skill">
+        <button data-action="click->form#showStep2Form" data-form-target="step2ButtonAddForm" class="btn-add-skills"><span class="icon-plus"></span>Add Degree</button>
+      </div>
+      <%# ===============================FORM========================================= %>
+      <div class="step2-form d-none" data-form-target="step2Box">
+        <p>Add you Degree :</p>
+        <%= simple_form_for(@degree, data: { action: "submit->form#updateStep2Infos",
+        form_target: "step2Form" }) do |f| %>
+          <%= f.input :title, class: "input-new-profile" %>
+          <%= f.input :level, as: :select, collection: ["Bac", "Bac +2", "Bac +3", "Bac +5", "Doctora"], class: "input-new-profile" %>
+          <%= f.input :field, class: "input-new-profile" %>
+          <%= f.input :school, class: "input-new-profile" %>
+          <div class="bouton-confirm-degree"><%= f.submit "Confirm", class: "btn-confirm" %></div>
+        <% end %>
+      </div>
+      <div class="button-container">
+        <%= link_to 'Back', new_profile_path, class: 'btn btn-back' %>
+      <button data-action="click->form#goStep3" class="btn-next-step">Next Step</button>
+      </div>
     </div>
-    <button data-action="click->form#goStep3" class="btn btn-success">Next Step -></button>
   </div>
+
+
   <%# =================================STEP 3======================================= %>
   <div class="container-step-3 d-none" data-form-target="step3">
-    <h1>Step 3 : Add your Skills & Languages</h1>
-    <%# ===============================AFFICHAGE DES DONNEES========================================= %>
-    <div class="step3-infos-language" data-form-target="step3InfosLanguage">
-      <%= render "languages/language", language: @language %>
+
+  <div class="progress-bar">
+        <div class="steps">
+          <div class="step step-active"><span>01</span>
+            <p>Profile</p>
+          </div>
+          <div class="step step-active"><span>02</span>
+            <p>Education</p>
+          </div>
+          <div class="step step-active"><span>03</span>
+            <p>Skills</p>
+          </div>
+          <div class="step"><span>04</span>
+            <p>Work Experience</p>
+          </div>
+          <div class="step"><span>05</span>
+            <p>Job offer</p>
+          </div>
+          <div class="step"><span>06</span>
+            <p>Generate CV</p>
+          </div>
+        </div>
     </div>
-    <div class="step3-infos-skill" data-form-target="step3InfosSkill">
-      <%= render "skills/skill", skill: @skill %>
+
+    <div class="step-3-card">
+      <div class="complet-profile-banner">
+        <h2>Add Your Skills & Languages</h2>
+        <p>Highlight your expertise by listing your skills and languages. Let potential employers know about your proficiency in various areas, from technical skills to foreign languages.</p>
+      </div>
+      <%# ===============================AFFICHAGE DES DONNEES========================================= %>
+      <div class="step3-separateur">
+        <div class="step3-infos-language" data-form-target="step3InfosLanguage">
+          <%= render "languages/language", language: @language %>
+        </div>
+      </div>
+
+      <div class="step3-separateur">
+        <div class="step3-infos-skill" data-form-target="step3InfosSkill">
+          <%= render "skills/skill", skill: @skill %>
+        </div>
+      </div>
+      <button data-action="click->form#showStep3FormLanguage" data-form-target="step3ButtonAddFormLanguage" class="btn-add-language"><span class="icon-plus"></span>Add Language</button>
+      <button data-action="click->form#showStep3FormSkill" data-form-target="step3ButtonAddFormSkill" class="btn-add-skills"><span class="icon-plus"></span>Add Skill</button>
+      <%# ===============================FORM========================================= %>
+      <div class="step3-form-language d-none" data-form-target="step3BoxLanguage">
+        <%= simple_form_for(@language, data: { action: "submit->form#updateStep3InfosLanguage",
+        form_target: "step3FormLanguage" }) do |f| %>
+          <%= f.input :title, class: "input-new-profile" %>
+          <%= f.input :level, as: :select, collection: [
+          "A1 (débutant absolu)",
+          "A2 (élémentaire)",
+          "B1 (intermédiaire)",
+          "B2 (intermédiaire avancé)",
+          "C1 (autonome)",
+          "C2 (maîtrise complète)"
+          ], class: "input-new-profile" %>
+          <%= f.submit "Add", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <div class="step3-form-skill d-none" data-form-target="step3BoxSkill">
+        <%= simple_form_for(@skill, data: { action: "submit->form#updateStep3InfosSkill",
+        form_target: "step3FormSkill" }) do |f| %>
+          <%= f.input :title, class: "input-new-profile" %>
+          <%= f.input :level, as: :select, collection: ["Junior (0-2 years)", "Experimented (2-5 years)", "Senior (5+ years)"], class: "input-new-profile" %>
+          <%= f.submit "Add", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <button data-action="click->form#goStep4" class="btn-next-step">Next Step</button>
     </div>
-    <button data-action="click->form#showStep3FormLanguage" data-form-target="step3ButtonAddFormLanguage" class="btn btn-primary">+ Add Language</button>
-    <button data-action="click->form#showStep3FormSkill" data-form-target="step3ButtonAddFormSkill" class="btn btn-primary">+ Add Skill</button>
-    <%# ===============================FORM========================================= %>
-    <div class="step3-form-language d-none" data-form-target="step3BoxLanguage">
-      <%= simple_form_for(@language, data: { action: "submit->form#updateStep3InfosLanguage",
-      form_target: "step3FormLanguage" }) do |f| %>
-        <%= f.input :title, class: "input-new-profile" %>
-        <%= f.input :level, as: :select, collection: [
-        "A1 (débutant absolu)",
-        "A2 (élémentaire)",
-        "B1 (intermédiaire)",
-        "B2 (intermédiaire avancé)",
-        "C1 (autonome)",
-        "C2 (maîtrise complète)"
-        ], class: "input-new-profile" %>
-        <%= f.submit "Add", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-    <div class="step3-form-skill d-none" data-form-target="step3BoxSkill">
-      <%= simple_form_for(@skill, data: { action: "submit->form#updateStep3InfosSkill",
-      form_target: "step3FormSkill" }) do |f| %>
-        <%= f.input :title, class: "input-new-profile" %>
-        <%= f.input :level, as: :select, collection: ["Junior (0-2 years)", "Experimented (2-5 years)", "Senior (5+ years)"], class: "input-new-profile" %>
-        <%= f.submit "Add", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-    <button data-action="click->form#goStep4" class="btn btn-success">Next Step -></button>
   </div>
+
+
+
   <%# ================================STEP¨4======================================== %>
   <div class="container-step-4 d-none" data-form-target="step4">
+
+    <div class="progress-bar">
+          <div class="steps">
+            <div class="step step-active"><span>01</span>
+              <p>Profile</p>
+            </div>
+            <div class="step step-active"><span>02</span>
+              <p>Education</p>
+            </div>
+            <div class="step step-active"><span>03</span>
+              <p>Skills</p>
+            </div>
+            <div class="step step-active"><span>04</span>
+              <p>Work Experience</p>
+            </div>
+            <div class="step"><span>05</span>
+              <p>Job offer</p>
+            </div>
+            <div class="step"><span>06</span>
+              <p>Generate CV</p>
+            </div>
+          </div>
+      </div>
+
     <h1>Step 4 : Add your experiences</h1>
     <%# ===============================AFFICHAGE DES DONNEES========================================= %>
     <div class="step4-infos" data-form-target="step4Infos">

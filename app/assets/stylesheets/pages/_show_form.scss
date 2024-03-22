@@ -1,0 +1,230 @@
+/* ========STEP 1======= */
+
+.container-step-1 {
+  padding-top: 2rem;
+}
+
+.step-1-information {
+  background-color: #fff;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.step-1-information h2 {
+  color: #6200EE;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.recap-profil-info {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.step-1-information p {
+  color: #333;
+  line-height: 1.5;
+  font-size: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-1-information p:last-child {
+  border-bottom: none;
+}
+
+/* ========STEP 2======= */
+
+
+.container-step-2 {
+  padding-top: 2rem;
+}
+
+/* Style for the overall card */
+.step-2-card {
+  background-color: #FFFFFF; /* Assuming you want a white background */
+  border: 1px solid #6200EE; /* The color of the border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2rem; /* Spacing inside the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+/* Style for the header */
+.step-2-card > h1 {
+  color: #6200EE; /* Your primary color */
+  margin-bottom: 1rem;
+}
+
+/* Style for the section displaying current data */
+.step2-infos {
+  background-color: #F5F5F5; /* Lighter background for contrast */
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Style for individual data points */
+.step2-infos p {
+  margin: 0.5rem 0; /* Space between paragraphs */
+  color: #333; /* Darker text for readability */
+}
+
+/* Style for form fields */
+.input-new-profile {
+  width: 100%; /* Full width of the container */
+  margin-bottom: 1rem; /* Space below each input */
+}
+
+.container-boutton-add-skill{
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.btn-add-skills {
+  background-color: #6200EE; /* The primary purple color */
+  color: #FFFFFF; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Vertical and horizontal padding */
+  border-radius: 20px; /* Rounded corners */
+  display: inline-flex; /* Use flexbox for aligning the icon and text */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 10px; /* Space between icon and text */
+  font-size: 16px; /* Size of the text */
+  font-weight: bold; /* Make the text bold */
+  cursor: pointer; /* Change cursor to pointer */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-add-skills:hover {
+  background-color: #7A4EAE; /* Slightly darker purple on hover */
+}
+
+.btn-add-skills:focus {
+  outline: none; /* Remove outline on focus for cleaner look */
+}
+
+.icon-plus {
+  display: inline-block;
+  background-color: #FFFFFF; /* White background for the circle */
+  color: #6200EE; /* Primary purple color for the icon */
+  border-radius: 50%; /* Round shape */
+  width: 24px; /* Width of the icon's circle */
+  height: 24px; /* Height of the icon's circle */
+  display: flex; /* Use flexbox for centering the icon */
+  align-items: center; /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
+  font-size: 16px; /* Size of the icon */
+  margin-right: 10px; /* Margin to the right of the icon */
+}
+
+/* Assuming you're using Font Awesome, you would style the 'fa' and 'fa-plus' classes */
+.icon-plus::before {
+  content: "\002b"; /* Unicode for plus sign */
+  font-family: "Font Awesome 5 Free"; /* This should be the name of the font family for your icon library */
+  font-weight: 900; /* Font Awesome requires 900 weight for the solid icons */
+}
+
+/* Pour le boutton confirm */
+.bouton-confirm-degree {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.btn-confirm {
+  background-color: #008000; /* Vert foncé */
+  color: #fff; /* Texte blanc */
+  padding-bottom: 10px; /* Ajoutez votre valeur de padding-bottom souhaitée */
+  border: none; /* Supprime la bordure */
+  border-radius: 5px; /* Ajoute une bordure arrondie */
+  font-size: 16px; /* Taille de police */
+  cursor: pointer; /* Change le curseur au survol */
+  transition: background-color 0.3s; /* Animation de transition */
+}
+
+.btn-confirm:hover {
+  background-color: #006400; /* Change la couleur de fond au survol */
+}
+
+
+/* ========STEP 3======= */
+
+.container-step-3 {
+  padding-top: 2rem;
+}
+
+/* Style for the overall card */
+.step-3-card {
+  background-color: #FFFFFF; /* Assuming you want a white background */
+  border: 1px solid #6200EE; /* The color of the border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2rem; /* Spacing inside the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.step3-separateur{
+  padding-bottom: 2rem;
+}
+
+.step3-infos-language {
+background-color: #F5F5F5; /* Lighter background for contrast */
+padding: 1rem;
+border-radius: 5px;
+}
+
+.step3-infos-skill {
+background-color: #F5F5F5; /* Lighter background for contrast */
+padding: 1rem;
+border-radius: 5px;
+}
+
+/* Style for individual data points */
+.step3-infos-language p {
+  margin: 0.5rem 0; /* Space between paragraphs */
+  color: #333; /* Darker text for readability */
+}
+
+/* Style for individual data points */
+.step3-infos-skill p {
+  margin: 0.5rem 0; /* Space between paragraphs */
+  color: #333; /* Darker text for readability */
+}
+
+.btn-add-language{
+  background-color: #6200EE; /* The primary purple color */
+  color: #FFFFFF; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Vertical and horizontal padding */
+  border-radius: 20px; /* Rounded corners */
+  display: inline-flex; /* Use flexbox for aligning the icon and text */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 10px; /* Space between icon and text */
+  font-size: 16px; /* Size of the text */
+  font-weight: bold; /* Make the text bold */
+  cursor: pointer; /* Change cursor to pointer */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-add-language:hover {
+  background-color: #7A4EAE; /* Slightly darker purple on hover */
+}
+
+.btn-add-language:focus {
+  outline: none; /* Remove outline on focus for cleaner look */
+}
