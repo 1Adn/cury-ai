@@ -3,7 +3,6 @@ class CvGenerationsController < ApplicationController
     # loading screen
   end
 
-  def create
-    # chatGPT ici je pense
+  def show
   end
 end

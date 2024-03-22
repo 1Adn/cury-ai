@@ -22,8 +22,11 @@
 
 .loading-text {
   position: absolute;
+  bottom: 20px;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
   z-index: 1;
 }
 
