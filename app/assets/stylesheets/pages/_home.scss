@@ -116,6 +116,13 @@
   }
 }
 
+.resume-video {
+  width: 100%; /* 100% de la largeur de son conteneur */
+  height: auto; /* Hauteur automatique pour conserver le ratio d'aspect */
+  display: block; /* Assurez-vous que la vidéo est un élément de bloc */
+  margin: 0 auto; /* Centrer la vidéo horizontalement */
+}
+
 .standout-section {
   text-align: center;
   padding: 4rem 0;
