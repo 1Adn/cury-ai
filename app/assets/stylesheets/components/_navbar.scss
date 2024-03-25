@@ -47,6 +47,13 @@
   width: 50px; /* ou la taille que vous préférez */
   height: 50px;
   border-radius: 50%; /* pour un cercle parfait */
+  border: 2px solid #6200EE; /* Outline with your primary color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transformation on hover */
+}
+
+.profile-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
 }
 
 /* Conteneur pour le contenu déroulant */
@@ -58,9 +65,14 @@
 /* Contenu du menu déroulant caché par défaut */
 .dropdown-content {
   display: none;
+  position: absolute;
+  right: 0; /* Align to the right side of .dropdown */
+  top: 100%; /* Positioned below the .dropdown */
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 6px; /* Rounded corners */
+  overflow: hidden; /* Ensures the children fit within the rounded corners */
   z-index: 1;
 }
 
@@ -70,9 +82,18 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  transition: background-color 0.2s; /* Smooth background transition on hover */
+}
+
+.dropdown-link:hover {
+  background-color: #6200EE; /* Primary color for hover state */
+  color: white; /* Text color change on hover */
 }
 
 /* Affichage du menu déroulant lors du survol */
 .dropdown:hover .dropdown-content {
   display: block;
+  animation: fadeIn 0.3s; /* Fade-in effect when displayed */
 }
+
+
