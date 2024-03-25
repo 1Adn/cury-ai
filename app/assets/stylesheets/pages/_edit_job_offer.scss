@@ -1,0 +1,41 @@
+.edit-job-offer-container {
+  margin-top: 50px; /* Espace au-dessus */
+  margin-bottom: 50px; /* Espace en dessous si nécessaire */
+  margin-left: auto; /* Centrage horizontal */
+  margin-right: auto; /* Centrage horizontal */
+  max-width: 600px; /* Limite la largeur du formulaire */
+  padding: 20px;
+  background-color: #f8f9fa; /* Couleur d'arrière-plan légère */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour le contraste */
+}
+
+.edit-job-offer-container h1 {
+  text-align: center; /* Titre centré */
+  color: #333; /* Couleur du texte */
+  margin-bottom: 30px; /* Espace en dessous du titre */
+}
+
+.edit-job-offer-form {
+  display: flex;
+  flex-direction: column; /* Empile les champs verticalement */
+}
+
+.edit-job-offer-form .input,
+.edit-job-offer-form .btn-update-job-offer {
+  margin-bottom: 15px; /* Espace entre les champs */
+  padding: 10px; /* Rembourrage interne pour les champs */
+  border: 1px solid #ced4da; /* Bordure légère pour les champs */
+  border-radius: 4px; /* Coins arrondis pour les champs */
+}
+
+.edit-job-offer-form .btn-update-job-offer {
+  background-color: #6200EE; /* Couleur de fond pour le bouton */
+  color: white; /* Couleur du texte pour le bouton */
+  cursor: pointer; /* Curseur pointeur pour le bouton */
+  border: none; /* Pas de bordure pour le bouton */
+}
+
+.edit-job-offer-form .btn-update-job-offer:hover {
+  background-color: #3700B3; /* Couleur de fond au survol pour le bouton */
+}

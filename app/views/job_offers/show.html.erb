@@ -1,8 +1,42 @@
-<h1>You will generate you CV based on that Offert :</h1>
-<h3>Title</h3>
-<%= @job_offer.title %>
-<h3>Description</h3>
-<%= @job_offer.description %>
-<%= link_to "Edit this job offer", edit_job_offer_path(@job_offer), class: 'btn btn-primary' %>
-<p>------------------------------------------------------------------------------------</p>
-<%= link_to 'Generate', new_job_offer_cv_generation_path(@job_offer) %>
+<div class="container-show-job-offer">
+  <div class="progress-bar">
+        <div class="steps">
+          <div class="step step-active"><span>01</span>
+                <p>Profile</p>
+          </div>
+          <div class="step step-active"><span>02</span>
+            <p>Education</p>
+          </div>
+          <div class="step step-active"><span>03</span>
+            <p>Skills</p>
+          </div>
+          <div class="step step-active"><span>04</span>
+            <p>Work Experience</p>
+          </div>
+          <div class="step step-active"><span>05</span>
+            <p>Job offer</p>
+          </div>
+          <div class="step"><span>06</span>
+            <p>Generate CV</p>
+          </div>
+        </div>
+    </div>
+
+  <div class="information-job-offer">
+   <div class="complet-profile-banner">
+        <h2>You will generate you CV based on that Offert :</h2>
+        <p>Create your customized CV tailored to match the requirements and specifications outlined in the job offer.</p>
+    </div>
+    <div class="recap-info-job-offer">
+      <p><strong>Title : </strong><%= @job_offer.title %></p>
+      <p><strong>Description : </strong><%= @job_offer.description %></p>
+    </div>
+    <div class="boutton-container-job-offer">
+    <%= link_to edit_job_offer_path(@job_offer), class: 'btn-edit' do %>
+      <i class="fas fa-edit"></i> Edit this job offer
+    <% end %>
+      <%= link_to 'Generate', new_job_offer_cv_generation_path(@job_offer), class: 'btn-generate' %>
+      <%# , data: { turbo_method: :create, turbo_confirm: 'This can take few seconds' } %>
+    </div>
+  </div>
+</div>

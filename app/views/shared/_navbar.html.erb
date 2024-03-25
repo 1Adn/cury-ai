@@ -3,9 +3,9 @@
   <nav>
     <% if user_signed_in? %>
     <div class="dropdown">
-      <%= image_tag("profile-projet.png", alt: "Profile", class: "profile-icon") %>
+      <%= image_tag("icone-final-account.png", alt: "Profile", class: "profile-icon") %>
       <div class="dropdown-content">
-        <%= link_to 'Dashboard', "dashboard_path", class: 'dropdown-link' %>
+        <%= link_to 'Dashboard', user_dashboard_path, class: 'dropdown-link' %>
         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'dropdown-link' %>
       </div>
     </div>
@@ -14,12 +14,5 @@
       <span class="button-space"></span>
       <%= link_to 'Sign Up', new_user_registration_path, class: 'signup-button' %>
     <% end %>
-
-
-
-
-    <%# <a href="/login" class="login-button">Log In</a>
-    <span class="button-space"></span>
-    <a href="/signup" class="signup-button">Sign Up</a> %>
   </nav>
 </header>

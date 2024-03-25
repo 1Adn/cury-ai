@@ -22,7 +22,7 @@ class JobOffersController < ApplicationController
   def update
     @job_offer = JobOffer.find(params[:id])
     if @job_offer.update(job_offer_params)
-      redirect_to @job_offer, notice: 'Job offer was successfully updated!'
+      redirect_to @job_offer, notice: '✅ Job offer was successfully updated!'
     else
       render :edit
     end

@@ -29,6 +29,8 @@
 
     &:hover {
       background-color: darken(#6200EE, 10%);
+      transform: scale(1.05);
+      box-shadow: 2px 5px 50px rgba(219, 143, 0, 0.4);
     }
   }
 }
@@ -99,6 +101,8 @@
 
   &:hover {
     background-color: darken(#6200EE, 10%);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(98, 0, 238, 0.4);
   }
 }
 
@@ -110,6 +114,13 @@
     width: 70%;
     height: auto;
   }
+}
+
+.resume-video {
+  width: 100%; /* 100% de la largeur de son conteneur */
+  height: auto; /* Hauteur automatique pour conserver le ratio d'aspect */
+  display: block; /* Assurez-vous que la vidéo est un élément de bloc */
+  margin: 0 auto; /* Centrer la vidéo horizontalement */
 }
 
 .standout-section {
@@ -358,6 +369,6 @@
 }
 
 .testimonial-rating {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   padding: 1rem;
 }
