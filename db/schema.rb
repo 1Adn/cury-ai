@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_20_140157) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_25_092830) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,10 +46,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_20_140157) do
     t.text "template"
     t.bigint "job_offer_id", null: false
     t.bigint "profile_id", null: false
-    t.bigint "cv_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cv_id"], name: "index_cv_generations_on_cv_id"
     t.index ["job_offer_id"], name: "index_cv_generations_on_job_offer_id"
     t.index ["profile_id"], name: "index_cv_generations_on_profile_id"
   end
@@ -59,6 +57,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_20_140157) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "cv_generation_id", null: false
+    t.index ["cv_generation_id"], name: "index_cvs_on_cv_generation_id"
     t.index ["user_id"], name: "index_cvs_on_user_id"
   end
 
@@ -140,9 +140,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_20_140157) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "cv_generations", "cvs"
   add_foreign_key "cv_generations", "job_offers"
   add_foreign_key "cv_generations", "profiles"
+  add_foreign_key "cvs", "cv_generations"
   add_foreign_key "cvs", "users"
   add_foreign_key "degrees", "profiles"
   add_foreign_key "experiences", "profiles"
