@@ -3,7 +3,7 @@
   <nav>
     <% if user_signed_in? %>
     <div class="dropdown">
-      <%= image_tag("profile-projet.png", alt: "Profile", class: "profile-icon") %>
+      <%= image_tag("icone-final-account.png", alt: "Profile", class: "profile-icon") %>
       <div class="dropdown-content">
         <%= link_to 'Dashboard', "dashboard_path", class: 'dropdown-link' %>
         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'dropdown-link' %>

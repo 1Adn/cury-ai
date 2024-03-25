@@ -29,6 +29,8 @@
 
     &:hover {
       background-color: darken(#6200EE, 10%);
+      transform: scale(1.05);
+      box-shadow: 2px 5px 50px rgba(219, 143, 0, 0.4);
     }
   }
 }
@@ -99,6 +101,8 @@
 
   &:hover {
     background-color: darken(#6200EE, 10%);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(98, 0, 238, 0.4);
   }
 }
 
@@ -358,6 +362,6 @@
 }
 
 .testimonial-rating {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   padding: 1rem;
 }
