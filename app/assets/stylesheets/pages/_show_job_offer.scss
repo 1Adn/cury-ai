@@ -1,0 +1,90 @@
+.container-show-job-offer {
+  padding-top: 2rem;
+}
+
+.information-job-offer {
+  background-color: #fff;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.information-job-offer h2 {
+  color: #6200EE;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.recap-info-job-offer {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.information-job-offer p {
+  background-color: rgb(255, 255, 255);
+  color: #333;
+  line-height: 1.5;
+  font-size: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.information-job-offer p:last-child {
+  border-bottom: none;
+}
+
+.btn-generate {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(145deg, #7b2ff7, #5e00ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-generate:hover {
+  background: linear-gradient(155deg, #892eff, #6a00ff);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-generate:focus,
+.btn-generate:active {
+  outline: none;
+  background: linear-gradient(165deg, #9b3fff, #7a00ff);
+}
+
+.btn-edit {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* No borders */
+  color: white; /* White text */
+  padding: 10px 15px; /* Some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Use inline-block for proper alignment */
+  font-size: 16px; /* Set a font size */
+  margin: 4px 2px; /* Add a slight margin */
+  transition-duration: 0.4s; /* 0.4 second transition effect on hover */
+  cursor: pointer; /* Change mouse to a pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.btn-edit:hover {
+  background-color: #45a049; /* Darker shade of green on hover */
+}
+
+.boutton-container-job-offer {
+  display: flex;
+  justify-content: space-between; /* This will place one item on the left and one on the right */
+  align-items: center; /* This will vertically center the buttons if they have different heights */
+  padding: 10px; /* Adjust padding as needed */
+}
