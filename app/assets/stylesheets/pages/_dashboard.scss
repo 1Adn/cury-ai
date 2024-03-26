@@ -1,0 +1,181 @@
+.dashboard {
+  display: flex;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.dashboard-sidebar {
+  background-color: #ffffff; /* Light grey background for the sidebar */
+  padding: 20px;
+  width: 250px; /* Width of the sidebar */
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Shadow to the right */
+}
+
+.dashboard-sidebar h2 {
+  padding: 10px 0;
+  color: #333; /* Dark grey color */
+  font-weight: 600; /* Make the font a bit bolder */
+}
+
+.dashboard-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.dashboard-sidebar ul li {
+  margin-bottom: 10px; /* space between links */
+}
+
+.dashboard-sidebar ul li a {
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333; /* Dark grey color */
+  padding: 10px 5px;
+  display: flex; /* Use flexbox for aligning icons and text */
+  align-items: center; /* Align items vertically in the center */
+  transition: all 0.4s ease; /* Smooth transition for background and color changes */
+}
+
+.dashboard-sidebar ul li a:hover,
+.dashboard-sidebar ul li a:focus {
+  color: #ffffff; /* Highlight color on hover or focus */
+  background-color:#5846FB;
+}
+
+.dashboard-sidebar .fa {
+  margin-right: 10px; /* space between icon and text */
+  width: 20px; /* fixed width for icons */
+  text-align: center; /* center the icon */
+}
+
+.dashboard-sidebar ul li a:focus {
+  outline: none; /* Remove the focus outline */
+}
+
+.dashboard-content {
+  flex-grow: 1; /* Take up remaining space */
+  padding: 2rem;
+  overflow-y: auto; /* Scrollable content */
+  background: linear-gradient(to top left, #5846FB, black);
+}
+
+.dashboard-section {
+  margin-bottom: 2rem;
+}
+
+.h2-dash {
+  color: #ffffff; /* Couleur vive */
+  font-size: 32px; /* Taille de police plus grande */
+  font-weight: bold; /* Texte en gras */
+  text-transform: uppercase; /* Convertir le texte en majuscules */
+  letter-spacing: 2px; /* Espacement entre les lettres */
+  text-shadow: 2px 2px 4px rgba(218, 218, 218, 0.5); /* Ombre portée */
+  border-bottom: 2px solid #cacaca; /* Bordure en bas */
+  padding-bottom: 10px; /* Espacement en bas */
+  margin-bottom: 10px;
+}
+
+.contact-infos,
+.experiences-infos,
+.skills-infos,
+.degrees-infos,
+.languages-infos,
+.dash-joboffer,
+.dash-cvs {
+  background-color: #fff; /* White background for content */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Shadow for the boxes */
+}
+
+.skills-list{
+  background-color: #969696;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.accordion-body-dashboard{
+  background-color: #e8e7e7;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  width: 60%; /* Définissez la largeur souhaitée */
+
+}
+
+.content-dash-accordion {
+  padding: 3px;
+}
+
+#boutton-accordion-dash {
+  border-radius: 10px;
+  width: 60%; /* Définissez la largeur souhaitée */
+
+  &:hover {
+    background-color: rgb(181, 146, 220);
+    transform: scale(1.025);
+    box-shadow: 2px 5px 50px rgba(219, 143, 0, 0.4);
+  }
+}
+
+
+
+.contact-list p,
+.experiences-list p,
+.skills-list p,
+.degrees-list p,
+.languages-list p,
+.joboffer-list p,
+.cvs-list p {
+  margin-bottom: 5px;
+  font-size: 1rem; /* Standard font size for contact info */
+  color: #474646; /* Lighter text color for readability */
+  padding: 0.5rem 0; /* Space above and below each item */
+}
+
+.contact-list {
+  list-style-type: none; /* Remove list bullets */
+  padding: 0; /* Remove default padding */
+}
+
+
+.contact-list strong,
+.experiences-list strong,
+.skills-list strong,
+.degrees-list strong,
+.languages-list strong,
+.joboffer-list strong,
+.cvs-list strong {
+  color: #333; /* Darker color for labels */
+  font-weight: bold; /* Bold for emphasis */
+}
+
+
+.add-cv-button {
+  margin-top: 70px; /* pushes the button to the bottom */
+  padding: 15px; /* add some padding around the link */
+  text-align: center; /* center the text and icon */
+}
+
+.add-cv-link {
+  display: inline-block; /* necessary for the padding to take effect */
+  background-color: #6200EE;
+  color: #fff;
+  padding: 10px 20px; /* top and bottom padding, left and right padding */
+  border-radius: 20px; /* rounded corners */
+  font-weight: bold; /* make the text bold */
+  text-decoration: none; /* no underline on the link */
+  transition: background-color 0.3s; /* smooth transition for hover effect */
+}
+
+.add-cv-link i {
+  margin-right: 8px; /* space between the plus icon and text */
+}
+
+.add-cv-link:hover {
+  background-color: darken(#6200EE, 10%);
+  transform: scale(1.05);
+  box-shadow: 2px 5px 50px rgba(219, 143, 0, 0.4);
+}
