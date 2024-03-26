@@ -1,12 +1,17 @@
-
 <section class="hero-section">
   <div class="hero-content">
-    <h1>Cury AI<br>generate cv</h1>
+    <h1>Cury AI<br>
+      generate cv</h1>
     <p>Discover a New Way to Generate CV with Artificial Intelligence</p>
-    <a href="/profiles/new" class="cta-button">Start generating your CV !</a>
+    <% if @user.present? && @user.profile.present? %>
+      <%= link_to 'Resume profile', profile_path(@user), class: 'cta-button' %>
+    <% else %>
+      <%= link_to 'Start generating your CV !', new_profile_path, class: 'cta-button' %>
+    <% end %>
+    <%# <a href="/profiles/:id/show" class="cta-button">Resume profile</a>
+    <a href="/profiles/new" class="cta-button">Start generating your CV !</a> %>
   </div>
 </section>
-
 <div class="h2-features">Why Choose Our Service :</div>
 <section class="service-features">
   <div class="feature">
@@ -22,7 +27,6 @@
     <p>Ensure accuracy and consistency with our platform</p>
   </div>
 </section>
-
 <section class="resume-section">
   <div class="resume-content">
     <h2>Say goodbye to hours spent perfecting your resume</h2>
@@ -33,7 +37,6 @@
     <%= video_tag("video-home.mp4", autoplay: true, loop: true, muted: true, class: "resume-video") %>
   </div>
 </section>
-
 <section class="standout-section">
   <h2 class="standout-heading"><strong>Ready to stand out?</strong></h2>
   <div class="feature-cards">
@@ -58,7 +61,6 @@
   </div>
   <a href="#" class="see-all-features-link">See all features</a>
 </section>
-
 <div id="homecarousel" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#homecarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -67,16 +69,17 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-<div class="testimonial">
-      <blockquote>"I'm absolutely thrilled with my experience with Cury AI. Their revolutionary platform has truly streamlined and sped up the process of creating my CV. Thanks to their cutting-edge artificial intelligence, I was able to generate a professional and impactful resume in just minutes."</blockquote>
-      <div class="testimonial-footer">
-        <div class="testimonial-image"> <%= image_tag("customer-profil.png", alt: "Yannis Djaffer-Khodja") %></div>
-        <div class="testimonial-name">Yannis Djaffer-Khodja</div>
-        <div class="testimonial-rating">★★★★★</div>
+      <div class="testimonial">
+        <blockquote>"I'm absolutely thrilled with my experience with Cury AI. Their revolutionary platform has truly streamlined and sped up the process of creating my CV. Thanks to their cutting-edge artificial intelligence, I was able to generate a professional and impactful resume in just minutes."</blockquote>
+        <div class="testimonial-footer">
+          <div class="testimonial-image"> <%= image_tag("customer-profil.png", alt: "Yannis Djaffer-Khodja") %></div>
+          <div class="testimonial-name">Yannis Djaffer-Khodja</div>
+          <div class="testimonial-rating">★★★★★</div>
+        </div>
       </div>
-    </div>    </div>
+    </div>
     <div class="carousel-item">
-        <div class="testimonial">
+      <div class="testimonial">
         <blockquote>"The service provided by Cury AI was exceptional. The intuitive interface and guidance helped me to build a resume that stands out in a crowded market. I'm deeply impressed by how easy and fast the whole process was."</blockquote>
         <div class="testimonial-footer">
           <div class="testimonial-image"> <%= image_tag("customer-profil.png", alt: "John Doe") %></div>
@@ -85,7 +88,6 @@
         </div>
       </div>
     </div>
-
   </div>
   <button class="carousel-control-prev text-danger" type="button" data-bs-target="#homecarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
