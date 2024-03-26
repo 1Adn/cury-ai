@@ -15,4 +15,3 @@ user1 = User.create!(email: 'jean@example.com', password: 'password1')
 user2 = User.create!(email: 'lucas@example.com', password: 'password2')
 user3 = User.create!(email: 'zoe@example.com', password: 'password3')
 puts 'Done'
-
