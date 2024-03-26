@@ -1,7 +1,6 @@
 <div data-controller="form" class ="container-all-form">
   <%# =============================STEP 1=========================================== %>
   <div class="container-step-1" data-form-target="step1">
-
     <div class="progress-bar">
       <div class="steps">
         <div class="step step-active"><span>01</span>
@@ -24,7 +23,6 @@
         </div>
       </div>
     </div>
-
     <div class="step-1-information">
       <div class="complet-profile-banner">
         <h2>Verify Your Profile Information</h2>
@@ -44,38 +42,31 @@
         <button data-action="click->form#goStep2" class="btn-next-step">Confirm</button>
       </div>
     </div>
-
   </div>
-
-
   <%# ===============================STEP 2========================================= %>
-
-
   <div class="container-step-2 d-none" data-form-target="step2">
-
-  <div class="progress-bar">
-        <div class="steps">
-          <div class="step step-active"><span>01</span>
-            <p>Profile</p>
-          </div>
-          <div class="step step-active"><span>02</span>
-            <p>Education</p>
-          </div>
-          <div class="step"><span>03</span>
-            <p>Skills</p>
-          </div>
-          <div class="step"><span>04</span>
-            <p>Work Experience</p>
-          </div>
-          <div class="step"><span>05</span>
-            <p>Job offer</p>
-          </div>
-          <div class="step"><span>06</span>
-            <p>Generate CV</p>
-          </div>
+    <div class="progress-bar">
+      <div class="steps">
+        <div class="step step-active"><span>01</span>
+          <p>Profile</p>
         </div>
+        <div class="step step-active"><span>02</span>
+          <p>Education</p>
+        </div>
+        <div class="step"><span>03</span>
+          <p>Skills</p>
+        </div>
+        <div class="step"><span>04</span>
+          <p>Work Experience</p>
+        </div>
+        <div class="step"><span>05</span>
+          <p>Job offer</p>
+        </div>
+        <div class="step"><span>06</span>
+          <p>Generate CV</p>
+        </div>
+      </div>
     </div>
-
     <div class="step-2-card">
       <div class="complet-profile-banner">
         <h2>Add Your Degree</h2>
@@ -102,38 +93,34 @@
       </div>
       <div class="button-container">
         <%= link_to 'Back', new_profile_path, class: 'btn btn-back' %>
-      <button data-action="click->form#goStep3" class="btn-next-step">Next Step</button>
+        <button data-action="click->form#goStep3" class="btn-next-step">Next Step</button>
       </div>
     </div>
   </div>
-
-
   <%# =================================STEP 3======================================= %>
   <div class="container-step-3 d-none" data-form-target="step3">
-
-  <div class="progress-bar">
-        <div class="steps">
-          <div class="step step-active"><span>01</span>
-            <p>Profile</p>
-          </div>
-          <div class="step step-active"><span>02</span>
-            <p>Education</p>
-          </div>
-          <div class="step step-active"><span>03</span>
-            <p>Skills</p>
-          </div>
-          <div class="step"><span>04</span>
-            <p>Work Experience</p>
-          </div>
-          <div class="step"><span>05</span>
-            <p>Job offer</p>
-          </div>
-          <div class="step"><span>06</span>
-            <p>Generate CV</p>
-          </div>
+    <div class="progress-bar">
+      <div class="steps">
+        <div class="step step-active"><span>01</span>
+          <p>Profile</p>
         </div>
+        <div class="step step-active"><span>02</span>
+          <p>Education</p>
+        </div>
+        <div class="step step-active"><span>03</span>
+          <p>Skills</p>
+        </div>
+        <div class="step"><span>04</span>
+          <p>Work Experience</p>
+        </div>
+        <div class="step"><span>05</span>
+          <p>Job offer</p>
+        </div>
+        <div class="step"><span>06</span>
+          <p>Generate CV</p>
+        </div>
+      </div>
     </div>
-
     <div class="step-3-card">
       <div class="complet-profile-banner">
         <h2>Add Your Skills & Languages</h2>
@@ -145,13 +132,11 @@
           <%= render "languages/language", language: @language %>
         </div>
       </div>
-
       <div class="step3-separateur">
         <div class="step3-infos-skill" data-form-target="step3InfosSkill">
           <%= render "skills/skill", skill: @skill %>
         </div>
       </div>
-
       <div class="btn-skill-et-language">
         <button data-action="click->form#showStep3FormLanguage" data-form-target="step3ButtonAddFormLanguage" class="btn-add-language"><span class="icon-plus"></span>Add Language</button>
         <button data-action="click->form#showStep3FormSkill" data-form-target="step3ButtonAddFormSkill" class="btn-add-skills"><span class="icon-plus"></span>Add Skill</button>
@@ -182,40 +167,34 @@
       </div>
       <div class="button-container">
         <%= link_to 'Back', new_profile_path, class: 'btn btn-back' %>
-      <button data-action="click->form#goStep4" class="btn-next-step">Next Step</button>
+        <button data-action="click->form#goStep4" class="btn-next-step">Next Step</button>
       </div>
     </div>
   </div>
-
-
-
   <%# ================================STEP¨4======================================== %>
-
   <div class="container-step-4 d-none" data-form-target="step4">
-
     <div class="progress-bar">
-          <div class="steps">
-            <div class="step step-active"><span>01</span>
-              <p>Profile</p>
-            </div>
-            <div class="step step-active"><span>02</span>
-              <p>Education</p>
-            </div>
-            <div class="step step-active"><span>03</span>
-              <p>Skills</p>
-            </div>
-            <div class="step step-active"><span>04</span>
-              <p>Work Experience</p>
-            </div>
-            <div class="step"><span>05</span>
-              <p>Job offer</p>
-            </div>
-            <div class="step"><span>06</span>
-              <p>Generate CV</p>
-            </div>
-          </div>
+      <div class="steps">
+        <div class="step step-active"><span>01</span>
+          <p>Profile</p>
+        </div>
+        <div class="step step-active"><span>02</span>
+          <p>Education</p>
+        </div>
+        <div class="step step-active"><span>03</span>
+          <p>Skills</p>
+        </div>
+        <div class="step step-active"><span>04</span>
+          <p>Work Experience</p>
+        </div>
+        <div class="step"><span>05</span>
+          <p>Job offer</p>
+        </div>
+        <div class="step"><span>06</span>
+          <p>Generate CV</p>
+        </div>
       </div>
-
+    </div>
     <div class="step-4-card">
       <div class="complet-profile-banner">
         <h2>Add Your Work Experience(s)</h2>
@@ -226,10 +205,9 @@
         <%= render "experiences/experience", experience: @experience %>
       </div>
       <div class="séparateur-btn-exepriences">
-      <button data-action="click->form#showStep4Form" data-form-target="step4ButtonAddForm" class="btn-add-skills"><span class="icon-plus"></span>Add</button>
+        <button data-action="click->form#showStep4Form" data-form-target="step4ButtonAddForm" class="btn-add-skills"><span class="icon-plus"></span>Add</button>
       </div>
-
-         <%# ===============================FORM========================================= %>
+      <%# ===============================FORM========================================= %>
       <div class="step4-form d-none" data-form-target="step4Box">
         <%= simple_form_for(@experience, data: { action: "submit->form#updateStep4Infos",
         form_target: "step4Form" }) do |f| %>
@@ -254,41 +232,36 @@
           <%= f.submit "Confirm", class: "btn btn-primary" %>
         <% end %>
       </div>
-
       <div class="button-container">
         <%= link_to 'Back', new_profile_path, class: 'btn btn-back' %>
         <button data-action="click->form#goStep5" class="btn-next-step">Next Step</button>
       </div>
     </div>
-    </div>
-
-
+  </div>
   <%# ================================STEP 5======================================== %>
   <div class="container-step-5 d-none" data-form-target="step5">
-
-  <div class="progress-bar">
-          <div class="steps">
-            <div class="step step-active"><span>01</span>
-              <p>Profile</p>
-            </div>
-            <div class="step step-active"><span>02</span>
-              <p>Education</p>
-            </div>
-            <div class="step step-active"><span>03</span>
-              <p>Skills</p>
-            </div>
-            <div class="step step-active"><span>04</span>
-              <p>Work Experience</p>
-            </div>
-            <div class="step step-active"><span>05</span>
-              <p>Job offer</p>
-            </div>
-            <div class="step"><span>06</span>
-              <p>Generate CV</p>
-            </div>
-          </div>
+    <div class="progress-bar">
+      <div class="steps">
+        <div class="step step-active"><span>01</span>
+          <p>Profile</p>
+        </div>
+        <div class="step step-active"><span>02</span>
+          <p>Education</p>
+        </div>
+        <div class="step step-active"><span>03</span>
+          <p>Skills</p>
+        </div>
+        <div class="step step-active"><span>04</span>
+          <p>Work Experience</p>
+        </div>
+        <div class="step step-active"><span>05</span>
+          <p>Job offer</p>
+        </div>
+        <div class="step"><span>06</span>
+          <p>Generate CV</p>
+        </div>
       </div>
-
+    </div>
     <div class="step-5-card">
       <div class="complet-profile-banner">
         <h2>Add Your Job Offer Details</h2>
@@ -303,6 +276,6 @@
           <%= f.button :submit, "Save job offer !", class: 'btn-save-job-offer' %>
         <% end %>
       </div>
-      </div>
     </div>
   </div>
+</div>
