@@ -32,21 +32,21 @@ puts 'Terminé'
 puts 'Création des diplômes...'
 Degree.create!(
   title: 'Licence en Informatique',
-  level: 'Bac',
+  level: 'Bac +3',
   field: 'Informatique',
   school: 'Université de Paris',
   profile_id: profile1.id
 )
 Degree.create!(
   title: 'Master en Génie Informatique',
-  level: 'Bac +2',
+  level: 'Bac +5',
   field: 'Génie Informatique',
   school: 'École Polytechnique',
   profile_id: profile1.id
 )
 Degree.create!(
   title: 'Doctorat en Intelligence Artificielle',
-  level: 'Bac +5',
+  level: 'Doctora',
   field: 'Intelligence Artificielle',
   school: "Université de Stanford",
   profile_id: profile1.id

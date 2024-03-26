@@ -1,22 +1,22 @@
 <div class="step3-infos-language-details">
   <div class="accordion" id="languageAccordion">
-  <% if @profile.languages.present? %>
-    <% @profile.languages.each_with_index do |language, index| %>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingLanguage<%= index %>">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLanguage<%= index %>" aria-expanded="true" aria-controls="collapseLanguage<%= index %>">
-            Language <%= index + 1 %>: <%= language.title %>
-          </button>
-        </h2>
-        <div id="collapseLanguage<%= index %>" class="accordion-collapse collapse show" aria-labelledby="headingLanguage<%= index %>" data-bs-parent="#languageAccordion">
-          <div class="accordion-body">
-            <strong>Your level:</strong> <%= language.level %>
+    <% if @profile.languages.present? %>
+      <% @profile.languages.each_with_index do |language, index| %>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingLanguage<%= index %>">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLanguage<%= index %>" aria-expanded="true" aria-controls="collapseLanguage<%= index %>">
+              Language <%= index + 1 %>: <%= language.title %>
+            </button>
+          </h2>
+          <div id="collapseLanguage<%= index %>" class="accordion-collapse collapse" aria-labelledby="headingLanguage<%= index %>" data-bs-parent="#languageAccordion">
+            <div class="accordion-body">
+              <strong>Your level:</strong> <%= language.level %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
+    <% else %>
+      <div>No languages</div>
     <% end %>
-  <% else %>
-    <div>No languages</div>
-  <% end %>
-</div>
+  </div>
 </div>

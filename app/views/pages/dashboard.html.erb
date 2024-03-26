@@ -134,10 +134,11 @@
           <% end %>
         </div>
       </section>
-
       <!-- Languages Section -->
       <section id="languages" class="dashboard-section" data-dashboard-target="section">
-        <div class="h2-dash"><h2>Languages</h2></div>
+        <div class="h2-dash">
+          <h2>Languages</h2>
+        </div>
         <!-- The rest of your languages content -->
         <div class="step3-infos-language-details">
           <div class="accordion" id="languageAccordion">
@@ -149,7 +150,7 @@
                       Language <%= index + 1 %>: <%= language.title %>
                     </button>
                   </h2>
-                  <div id="collapseLanguage<%= index %>" class="accordion-collapse collapse show" aria-labelledby="headingLanguage<%= index %>" data-bs-parent="#languageAccordion">
+                  <div id="collapseLanguage<%= index %>" class="accordion-collapse collapse" aria-labelledby="headingLanguage<%= index %>" data-bs-parent="#languageAccordion">
                     <div class="accordion-body-dashboard">
                       <div class="content-dash-accordion"><strong>Your level:</strong> <%= language.level %></div>
                     </div>
@@ -166,7 +167,6 @@
         <%= link_to 'Complete Profile', new_profile_path %>
       <% end %>
     </section>
-
     <!-- Job Offer Section -->
     <section id="joboffer" class="dashboard-section" data-dashboard-target="section">
       <h2>Targeted Job Offer</h2>
