@@ -43,31 +43,27 @@
           <h2>Work experiences</h2>
         </div>
         <!-- The rest of your experiences content -->
-        <div class="accordion" id="accordionDegrees">
-          <% if @profile.degrees.present? %>
-            <% @profile.degrees.each_with_index do |degree, index| %>
+        <div class="accordion" id="experienceAccordion">
+          <% if @profile.experiences.present? %>
+            <% @profile.experiences.each_with_index do |experience, index| %>
               <div class="accordion-item-dash">
                 <h2 class="accordion-header-dash" id="heading-dash<%= index %>">
-                  <button id="boutton-accordion-dash" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
-                    Degree <%= index + 1 %>
+                  <button id="boutton-accordion-dash" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExperience<%= index %>" aria-expanded="false" aria-controls="collapseExperience<%= index %>">
+                    Experience <%= index + 1 %>: <%= experience.title %>
                   </button>
                 </h2>
-                <div id="collapse<%= index %>" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionDegrees">
+                <div id="collapseExperience<%= index %>" class="accordion-collapse collapse" aria-labelledby="headingExperience<%= index %>" data-bs-parent="#experienceAccordion">
                   <div class="accordion-body-dashboard">
-                    <div class="content-dash-accordion"><strong>Your Degree name:</strong> <%= degree.title %><br>
-                    </div>
-                    <div class="content-dash-accordion"><strong>Your Degree level:</strong> <%= degree.level %><br>
-                    </div>
-                    <div class="content-dash-accordion"><strong>Your Degree Field:</strong> <%= degree.field %><br>
-                    </div>
-                    <div class="content-dash-accordion"><strong>Your Degree's school:</strong> <%= degree.school %><br>
-                    </div>
+                    <div class="content-dash-accordion"><strong>Type:</strong> <%= experience.experience_type %><br></div>
+                    <div class="content-dash-accordion"><strong>Started:</strong> <%= experience.starting_date %><br></div>
+                    <div class="content-dash-accordion"><strong>Ended:</strong> <%= experience.ending_date %><br></div>
+                    <div class="content-dash-accordion"><strong>Description:</strong> <%= experience.description %></div>
                   </div>
                 </div>
               </div>
             <% end %>
           <% else %>
-            <div>No degrees</div>
+            <div class="no-experience-message">No Experiences</div>
           <% end %>
         </div>
       </section>
@@ -169,7 +165,9 @@
     </section>
     <!-- Job Offer Section -->
     <section id="joboffer" class="dashboard-section" data-dashboard-target="section">
-      <div class="h2-dash"><h2>Targeted Job Offer</h2></div>
+      <div class="h2-dash">
+        <h2>Targeted Job Offer</h2>
+      </div>
       <!-- The rest of your job offer content -->
       <% if @job_offers %>
         <div class="dash-joboffer">
@@ -187,7 +185,9 @@
     </section>
     <!-- Generated Resumes Section -->
     <section id="cvs" class="dashboard-section" data-dashboard-target="section">
-      <div class="h2-dash"><h2>Your Generated Resumes</h2></div>
+      <div class="h2-dash">
+        <h2>Your Generated Resumes</h2>
+      </div>
       <!-- The rest of your resumes content -->
       <% if @cvs.present? %>
         <div class="dash-cvs">
@@ -199,7 +199,9 @@
           <% end %>
         </div>
       <% else %>
-        <div class="h4-dash"><p>You have not generated any resumes yet.</p></div>
+        <div class="h4-dash">
+          <p>You have not generated any resumes yet.</p>
+        </div>
       <% end %>
     </section>
   </main>
