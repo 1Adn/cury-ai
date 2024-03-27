@@ -1,0 +1,47 @@
+.btn-update-profile {
+  background-color: #5846FB; /* Primary color for your design */
+  color: #ffffff; /* Text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for size */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-update-profile:hover,
+.btn-update-profile:focus {
+  background-color: #4139c8; /* Slightly darker shade for the hover state */
+  outline: none; /* Remove outline on focus */
+}
+
+.btn-cancel-profile {
+  background-color: #959595; /* White background for a less prominent button */
+  color: #333333; /* Darker text color for contrast */
+  border: 1px solid #707070; /* Light grey border */
+  padding: 10px 20px; /* Padding for size */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: normal; /* Normal text weight */
+  text-transform: uppercase; /* Uppercase text */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  text-decoration: none;
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-cancel-profile:hover,
+.btn-cancel-profile:focus {
+  color: white;
+  font-weight: bold;
+  background-color: #9a2929; /* Slightly darker shade for the hover state */
+  border-color: #5b0101; /* Darker border color on hover */
+  outline: none; /* Remove outline on focus */
+}
+
+/* Container for the actions to ensure proper spacing */
+.actions {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: space-between; /* Align buttons to the start of the container */
+  padding-top: 20px; /* Space above the button container */
+}
