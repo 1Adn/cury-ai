@@ -14,6 +14,12 @@
               <strong>Your Degree level:</strong> <%= degree.level %><br>
               <strong>Your Degree Field:</strong> <%= degree.field %><br>
               <strong>Your Degree's school:</strong> <%= degree.school %><br>
+               <!-- Button trigger modal -->
+              <div class="delete-button-container">
+                <button type="button" data-controller="delete" data-action="click->delete#delete" data-delete-url-value="<%= degree_path(degree) %>" class="icon-button-delete">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -22,6 +28,4 @@
       <div>No degrees</div>
     <% end %>
   </div>
-
-
 </div>

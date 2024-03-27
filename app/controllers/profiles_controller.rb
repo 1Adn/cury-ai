@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
   def new
     @profile = Profile.new
   end
-  
+
   def create
     @profile = Profile.new(params_profile)
     @profile.user_id = current_user.id
@@ -34,6 +34,15 @@ class ProfilesController < ApplicationController
       redirect_to @profile, notice: 'Profile was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @degree = current_user.profile.degrees.find(params[:id])
+    @degree.destroy
+    respond_to do |format|
+      format.html { redirect_to profile_path(current_user.profile), notice: 'Degree was successfully deleted.' }
+      format.json { head :no_content }
     end
   end
 

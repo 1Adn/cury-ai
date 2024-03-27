@@ -1,0 +1,21 @@
+.accordion-body {
+  position: relative; /* Permet le positionnement absolu à l'intérieur */
+}
+
+.delete-button-container {
+  position: absolute; /* Positionnement absolu */
+  right: 5%; /* À droite de l'accordion-body */
+  top: 50%; /* À mi-hauteur de l'accordion-body */
+  transform: translateY(-50%); /* Centrage vertical du bouton */
+}
+
+.icon-button-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #dc3545; /* Couleur de l'icône, ajustez selon votre design */
+}
+
+.icon-button-delete:hover, .icon-button-delete:focus {
+  color: #a71d2a; /* Couleur au survol, ajustez selon votre design */
+}

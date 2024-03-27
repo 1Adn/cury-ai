@@ -1,5 +1,5 @@
 <div class="step3-infos-skill-details">
-  
+
 
   <div class="accordion" id="accordionExample">
   <% if @profile.skills.present? %>
@@ -14,6 +14,12 @@
         <div class="accordion-body">
           <strong>Your skill:</strong> <%= skill.title %><br>
           <strong>Your level:</strong> <%= skill.level %>
+           <!-- Button trigger modal -->
+              <div class="delete-button-container">
+                <button type="button" data-controller="delete" data-action="click->delete#delete" data-delete-url-value="<%= skill_path(skill) %>" class="icon-button-delete">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
         </div>
       </div>
     </div>
