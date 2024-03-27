@@ -14,6 +14,12 @@
             <strong>Started:</strong> <%= experience.starting_date %><br>
             <strong>Ended:</strong> <%= experience.ending_date %><br>
             <strong>Description:</strong> <%= experience.description %>
+            <!-- Button trigger modal -->
+              <div class="delete-button-container">
+                <button type="button" data-controller="delete" data-action="click->delete#delete" data-delete-url-value="<%= experience_path(experience) %>" class="icon-button-delete">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
           </div>
         </div>
       </div>
