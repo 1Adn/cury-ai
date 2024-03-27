@@ -37,6 +37,7 @@
         <p> <strong> Your Email : </strong> <%= @profile.email %></p>
         <p> <strong> Your Photo :</strong> <%= @profile.photo %></p>
       </div>
+      <div class="container-btn-edit-profile"><%= link_to 'Edit', edit_profile_path(@profile), class: 'btn btn-edit' %></div>
       <div class="button-container">
         <%= link_to 'Back', new_profile_path, class: 'btn btn-back' %>
         <button data-action="click->form#goStep2" class="btn-next-step">Confirm</button>
