@@ -9,6 +9,7 @@ class DegreesController < ApplicationController
       format.html { redirect_to profile_path }
       format.json
     end
+
   end
 
   private
