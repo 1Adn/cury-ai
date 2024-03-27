@@ -169,7 +169,7 @@
     </section>
     <!-- Job Offer Section -->
     <section id="joboffer" class="dashboard-section" data-dashboard-target="section">
-      <h2>Targeted Job Offer</h2>
+      <div class="h2-dash"><h2>Targeted Job Offer</h2></div>
       <!-- The rest of your job offer content -->
       <% if @job_offers %>
         <div class="dash-joboffer">
@@ -187,7 +187,7 @@
     </section>
     <!-- Generated Resumes Section -->
     <section id="cvs" class="dashboard-section" data-dashboard-target="section">
-      <h2>Your Generated Resumes</h2>
+      <div class="h2-dash"><h2>Your Generated Resumes</h2></div>
       <!-- The rest of your resumes content -->
       <% if @cvs.present? %>
         <div class="dash-cvs">
@@ -199,7 +199,7 @@
           <% end %>
         </div>
       <% else %>
-        <p>You have not generated any resumes yet.</p>
+        <div class="h4-dash"><p>You have not generated any resumes yet.</p></div>
       <% end %>
     </section>
   </main>
