@@ -15,7 +15,9 @@ class CvGeneration < ApplicationRecord
     <div class='cv-container'>
       <div class='left-column'>
         <div class='portrait'>
-          <%= image_tag('image-pdf-cv-test.png', alt: 'Profil picture of your CV') %>
+
+          <img src='https://res.cloudinary.com/dqpfeoe6s/image/upload/v1711464925/development/fdnlesmspf0kcjwagytxru6hlfbe.jpg' alt='Description de l'image'>
+
         </div>
         <div class='section'>
           <p>
@@ -130,6 +132,7 @@ class CvGeneration < ApplicationRecord
 
 - create a small description of the person in the 'a propos' section
 all the skills, languages, degrees and experiences must be present
+Give me only the html code, nothing more.
           "
       }]
     })
