@@ -35,7 +35,11 @@
         <p> <strong> Your Age : </strong> <%= @profile.age %></p>
         <p> <strong> Your Phone number :</strong> <%= @profile.phone_number %></p>
         <p> <strong> Your Email : </strong> <%= @profile.email %></p>
-        <p> <strong> Your Photo :</strong> <%= @profile.photo %></p>
+        <p> <strong> Your Photo :</strong>
+          <% if @profile.photo.attached? %>
+            <%= image_tag(@profile.photo, alt: "Description of the image") %>
+          <% end %>
+        </p>
       </div>
       <div class="container-btn-edit-profile"><%= link_to 'Edit', edit_profile_path(@profile), class: 'btn btn-edit' %></div>
       <div class="button-container">
@@ -227,10 +231,11 @@
           "International Experience"
           ], class: "input-new-profile" %>
           <%= f.input :field, class: "input-new-profile" %>
+          <%= f.input :company, class: "input-new-profile" %>
           <%= f.input :starting_date, class: "input-new-profile" %>
           <%= f.input :ending_date, class: "input-new-profile" %>
           <%= f.input :description, class: "input-new-profile" %>
-          <%= f.submit "Confirm", class: "btn btn-primary" %>
+          <%= f.submit "Add", class: "btn btn-primary" %>
         <% end %>
       </div>
       <div class="button-container">
