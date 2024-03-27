@@ -31,7 +31,7 @@ profile2 = Profile.create!(
   first_name: 'Lucas',
   last_name: 'Dupont',
   address: "17 allée des lutins, 75010, Paris",
-  age: '22',
+  age: '34',
   phone_number: '0674470959',
   email: 'lucas@example.com',
   user_id: user2.id
@@ -62,21 +62,21 @@ Degree.create!(
 )
 Degree.create!(
   title: 'Licence en Informatique',
-  level: 'Bac',
+  level: 'Bac +3',
   field: 'Informatique',
   school: 'Université de Paris',
   profile_id: profile2.id
 )
 Degree.create!(
   title: 'Master en Génie Informatique',
-  level: 'Bac +2',
+  level: 'Bac +5',
   field: 'Génie Informatique',
   school: 'École Polytechnique',
   profile_id: profile2.id
 )
 Degree.create!(
   title: 'Doctorat en Intelligence Artificielle',
-  level: 'Bac +5',
+  level: 'Doctora',
   field: 'Intelligence Artificielle',
   school: "Université de Stanford",
   profile_id: profile2.id
@@ -141,17 +141,17 @@ Skill.create!(
 )
 Skill.create!(
   title: 'Ruby on Rails',
-  level: 'Junior (0-2 years)',
+  level: 'Experimented (2-5 years)',
   profile_id: profile2.id
 )
 Skill.create!(
   title: 'JavaScript',
-  level: 'Junior (0-2 years)',
+  level: 'Experimented (2-5 years)',
   profile_id: profile2.id
 )
 Skill.create!(
   title: 'Python',
-  level: 'Junior (0-2 years)',
+  level: 'Experimented (2-5 years)',
   profile_id: profile2.id
 )
 Skill.create!(
@@ -237,6 +237,7 @@ Experience.create!(
   starting_date: '2017-05-01',
   ending_date: '2022-08-31',
   description: "En tant qu'ingénieur logiciel, j'ai été responsable du développement et de la maintenance d'applications web complexes utilisant les technologies Ruby on Rails et React.js. Mon travail comprenait la conception de nouvelles fonctionnalités, l'optimisation des performances et la résolution de bugs.",
+  company: 'Apple',
   profile_id: profile1.id
 )
 Experience.create!(
@@ -246,6 +247,7 @@ Experience.create!(
   starting_date: '2016-06-01',
   ending_date: '2016-08-31',
   description: "En tant que stagiaire analyste de données, j'ai travaillé sur des projets d'analyse de données visant à extraire des informations significatives à partir de vastes ensembles de données. J'ai utilisé des techniques d'analyse statistique et des outils informatiques pour présenter des insights précieux pour la prise de décision commerciale.",
+  company: 'Google',
   profile_id: profile1.id
 )
 Experience.create!(
@@ -255,6 +257,7 @@ Experience.create!(
   starting_date: '2015-01-01',
   ending_date: '2017-04-30',
   description: "En tant que développeur web freelance, j'ai collaboré avec divers clients pour concevoir, développer et maintenir des sites web. Mon rôle comprenait la création d'interfaces utilisateur attractives, le développement de fonctionnalités personnalisées et l'intégration de solutions de commerce électronique.",
+  company: 'Le Wagon',
   profile_id: profile1.id
 )
 Experience.create!(
@@ -264,6 +267,7 @@ Experience.create!(
   starting_date: '2014-09-01',
   ending_date: '2015-06-30',
   description: "En participant à un programme d'échange étudiant, j'ai eu l'opportunité d'étudier à l'étranger à l'Université de Californie, Berkeley. Cette expérience m'a permis d'explorer de nouvelles cultures, d'améliorer mes compétences linguistiques et d'acquérir une perspective internationale sur l'éducation et la vie universitaire.",
+  company: 'Berkeley university',
   profile_id: profile1.id
 )
 Experience.create!(
@@ -273,6 +277,7 @@ Experience.create!(
   starting_date: '2017-05-01',
   ending_date: '2022-08-31',
   description: "En tant qu'ingénieur logiciel, j'ai été responsable du développement et de la maintenance d'applications web complexes utilisant les technologies Ruby on Rails et React.js. Mon travail comprenait la conception de nouvelles fonctionnalités, l'optimisation des performances et la résolution de bugs.",
+  company: 'Apple',
   profile_id: profile2.id
 )
 Experience.create!(
@@ -282,6 +287,7 @@ Experience.create!(
   starting_date: '2016-06-01',
   ending_date: '2016-08-31',
   description: "En tant que stagiaire analyste de données, j'ai travaillé sur des projets d'analyse de données visant à extraire des informations significatives à partir de vastes ensembles de données. J'ai utilisé des techniques d'analyse statistique et des outils informatiques pour présenter des insights précieux pour la prise de décision commerciale.",
+  company: 'Google',
   profile_id: profile2.id
 )
 Experience.create!(
@@ -291,6 +297,7 @@ Experience.create!(
   starting_date: '2015-01-01',
   ending_date: '2017-04-30',
   description: "En tant que développeur web freelance, j'ai collaboré avec divers clients pour concevoir, développer et maintenir des sites web. Mon rôle comprenait la création d'interfaces utilisateur attractives, le développement de fonctionnalités personnalisées et l'intégration de solutions de commerce électronique.",
+  company: 'Le Wagon',
   profile_id: profile2.id
 )
 Experience.create!(
@@ -300,6 +307,7 @@ Experience.create!(
   starting_date: '2014-09-01',
   ending_date: '2015-06-30',
   description: "En participant à un programme d'échange étudiant, j'ai eu l'opportunité d'étudier à l'étranger à l'Université de Californie, Berkeley. Cette expérience m'a permis d'explorer de nouvelles cultures, d'améliorer mes compétences linguistiques et d'acquérir une perspective internationale sur l'éducation et la vie universitaire.",
+  company: 'Berkeley university',
   profile_id: profile2.id
 )
 puts 'Terminé'

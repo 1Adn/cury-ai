@@ -19,4 +19,5 @@ class Experience < ApplicationRecord
   validates :starting_date, presence: true
   validates :ending_date, presence: true
   validates :description, presence: true
+  validates :company, presence: true
 end
