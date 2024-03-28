@@ -8,11 +8,15 @@ class CvGenerationsController < ApplicationController
   def create
     @cvgeneration = CvGeneration.new
     @profile = current_user.profile
-    @job_offer = current_user.job_offers.last
+    @job_offer = JobOffer.find(params[:job_offer_id])
     @cvgeneration.profile = @profile
     @cvgeneration.job_offer = @job_offer
-    @cvgeneration.save!
-    redirect_to cv_generation_path(@cvgeneration)
+    if @cvgeneration.save!
+      GenerateCvJob.perform_later(@cvgeneration)
+      redirect_to cv_generation_path(@cvgeneration)
+    else
+    redirect_to job_offer_path(@cvgeneration)
+    end
   end
 
   def show
@@ -22,4 +26,5 @@ class CvGenerationsController < ApplicationController
     @cv.cv_generation = @cvgeneration
     @cv.save!
   end
+
 end
