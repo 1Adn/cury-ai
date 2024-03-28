@@ -37,7 +37,7 @@
       <%= link_to edit_job_offer_path(@job_offer), class: 'btn-edit' do %>
         <i class="fas fa-edit"></i> Edit this job offer
       <% end %>
-        <%= link_to 'Generate', new_job_offer_cv_generation_path(@job_offer), class: 'btn-generate' %>
+      <%= link_to 'Generate', job_offer_cv_generations_path(@job_offer), class: 'btn-generate', data: {turbo_method: :post} %>
         <%# , data: { turbo_method: :create, turbo_confirm: 'This can take few seconds' } %>
       </div>
     </div>
