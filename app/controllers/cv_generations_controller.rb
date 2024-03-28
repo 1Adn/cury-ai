@@ -21,10 +21,6 @@ class CvGenerationsController < ApplicationController
 
   def show
     @cvgeneration = CvGeneration.find(params[:id])
-    @cv = Cv.new
-    @cv.user = current_user
-    @cv.cv_generation = @cvgeneration
-    @cv.save!
+    @cv = @cvgeneration.cvs.last
   end
-
 end
