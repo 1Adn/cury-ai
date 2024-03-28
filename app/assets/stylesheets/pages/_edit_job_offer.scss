@@ -19,6 +19,11 @@
 .edit-job-offer-form {
   display: flex;
   flex-direction: column; /* Empile les champs verticalement */
+  align-items: center;
+}
+
+.edit-job-offer-form .input{
+  width: 550px;
 }
 
 .edit-job-offer-form .input,

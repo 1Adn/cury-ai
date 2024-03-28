@@ -1,13 +1,17 @@
-  <% if @cv.present? %>
-  <%== @cv.content %>
+<div data-controller="refresh-show-cv">
+  <% if @cv.present?%>
+    <div data-refresh-show-cv-target="cv">
+      <%== @cv.content %>
+    </div>
   <% else %>
     <div class="container-new-cv-generation">
-  <div class="loader">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <p class="loading-text p-5">Work in Progress...</p>
-</div>
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p class="loading-text p-5">Work in Progress...</p>
+    </div>
   <% end %>
+</div>

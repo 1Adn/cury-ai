@@ -23,5 +23,4 @@ class CvGenerationsController < ApplicationController
     @cvgeneration = CvGeneration.find(params[:id])
     @cv = @cvgeneration.cvs.last
   end
-
 end

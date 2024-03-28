@@ -5,12 +5,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingLanguage<%= index %>">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLanguage<%= index %>" aria-expanded="false" aria-controls="collapseLanguage<%= index %>">
-              Language <%= index + 1 %>: <%= language.title %>
+             <%= language.title %>
             </button>
           </h2>
           <div id="collapseLanguage<%= index %>" class="accordion-collapse collapse" aria-labelledby="headingLanguage<%= index %>" data-bs-parent="#languageAccordion">
             <div class="accordion-body">
-              <strong>Your level:</strong> <%= language.level %>
+              <strong>Your level</strong> <%= language.level %>
                <!-- Button trigger modal -->
               <div class="delete-button-container">
                 <button type="button" data-controller="delete" data-action="click->delete#delete" data-delete-url-value="<%= language_path(language) %>" class="icon-button-delete">

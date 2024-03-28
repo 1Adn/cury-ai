@@ -7,13 +7,12 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="heading<%= index %>">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>" aria-expanded="false" aria-controls="collapse<%= index %>">
-          Skill number <%= index + 1 %>
+          <%= skill.title %>
         </button>
       </h2>
       <div id="collapse<%= index %>" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>Your skill:</strong> <%= skill.title %><br>
-          <strong>Your level:</strong> <%= skill.level %>
+          <strong>Your level</strong> <%= skill.level %>
            <!-- Button trigger modal -->
               <div class="delete-button-container">
                 <button type="button" data-controller="delete" data-action="click->delete#delete" data-delete-url-value="<%= skill_path(skill) %>" class="icon-button-delete">
