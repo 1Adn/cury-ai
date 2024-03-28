@@ -43,6 +43,14 @@
 }
 
 //====================================================================
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Assurez-vous que le body prend au moins toute la hauteur du viewport */
+  margin: 0; /* Enlève les marges par défaut */
+}
+
 .hero-section {
   background-color: #000;
   color: #fff;
@@ -71,10 +79,11 @@
     color: #fff;
     border: none;
     padding: 1rem 2rem;
-    border-radius: 20px;
+    border-radius: 30px;
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
+    border: 2px solid #000; /* couleur de la bordure et épaisseur */
     transition: background-color 0.3s ease;
 
     &:hover {
@@ -100,7 +109,6 @@
   align-items: center;
   border-radius: 0 0 30px 30px; // Arrondi seulement en bas à gauche et en bas à droite
 
-
   .feature {
     background-color: #333; // Dark background for the feature
     color: #fff;
@@ -109,11 +117,20 @@
     width: 20%; // Adjust width as needed
     margin: 0.5rem;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet de profondeur */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour le survol */
 
     p {
       margin: 0;
     }
   }
+}
+
+/* Style au survol pour ajouter une interaction visuelle */
+.feature:hover {
+  background-color: rgb(127, 26, 199); /* Change la couleur de fond au survol */
+  box-shadow: 0 12px 20px rgba(81, 1, 103, 0.885); /* Ombre plus prononcée pour l'effet au survol */
+  transform: scale(1.025);
 }
 
 .resume-section {
@@ -317,80 +334,13 @@
   padding: 1rem;
 }
 
-.footer {
-  background-color: #000000; /* Or any color that matches your design */
-  color: #ffffff; /* Adjust the color to match your design */
-  padding: 1rem 0;
-  font-family: Arial, sans-serif; /* Use your preferred font */
-}
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 10%; /* Adjust padding and width according to your design */
-}
-
-.footer-brand a {
-  font-size: 1.5rem; /* Larger font size for the brand */
-  color: #ffffff; /* Adjust brand color */
-  text-decoration: none;
-}
-
-.footer-links a,
-.footer-socials a {
-  color: #ffffff; /* Adjust link color */
-  text-decoration: none;
-  margin-right: 1rem; /* Spacing between links */
-}
-
-.footer-links a:hover,
-.footer-socials a:hover {
-  text-decoration: underline; /* Hover effect for links */
-}
-
-.footer-socials a {
-  font-size: 1.2rem; /* Adjust font size for social icons */
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 10%; /* Adjust padding and width according to your design */
-  border-top: 1px solid #ccc; /* Light border for the bottom area */
-}
-
-.footer-bottom p {
-  margin: 0;
-}
-
-.footer-policy a {
-  margin-right: 1rem; /* Spacing between policy links */
-}
-
-/* Responsive adjustments if necessary */
-@media (max-width: 768px) {
-  .footer-content, .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-links, .footer-socials, .footer-policy {
-    margin-bottom: 1rem;
-  }
-
-  .footer-links a,
-  .footer-socials a,
-  .footer-policy a {
-    margin-right: 0;
-    margin-bottom: 0.5rem; /* Add some space below each link on smaller screens */
-  }
-}
 
 .carousel-item {
   background-color: white;
+  padding-bottom: 3rem;
 }
+
 .testimonial {
   background: #000; /* arrière-plan noir */
   color: #fff; /* texte blanc */
@@ -398,7 +348,8 @@
   border-radius: 10px; /* bords arrondis */
   position: relative; /* pour positionner les éléments absolument à l'intérieur */
   margin: auto; /* pour centrer dans le carousel */
-  max-width: 600px; /* largeur maximale du témoignage */
+  width: 600px; /* largeur maximale du témoignage */
+  height: 350px;
   text-align: left; /* alignement du texte à gauche */
 }
 

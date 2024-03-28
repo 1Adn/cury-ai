@@ -1,20 +1,22 @@
-<span class="space-edit"></span>
-<div class="edit-job-offer-container">
-  <h1>Edit Job Offer</h1>
+<div class=content>
+  <span class="space-edit"></span>
+  <div class="edit-job-offer-container">
+    <h1>Edit Job Offer</h1>
 
-  <%= simple_form_for @job_offer, html: { class: 'edit-job-offer-form' } do |f| %>
-    <%= f.error_notification %>
+    <%= simple_form_for @job_offer, html: { class: 'edit-job-offer-form' } do |f| %>
+      <%= f.error_notification %>
 
-    <div class="input">
-      <%= f.input :title, input_html: { class: 'form-control' } %>
-    </div>
+      <div class="input">
+        <%= f.input :title, input_html: { class: 'form-control' } %>
+      </div>
 
-    <div class="input">
-      <%= f.input :description, input_html: { class: 'form-control' } %>
-    </div>
+      <div class="input">
+        <%= f.input :description, input_html: { class: 'form-control' } %>
+      </div>
 
-    <div class="btn">
-      <%= f.button :submit, "Update job offer !", class: 'btn-update-job-offer btn-primary' %>
-    </div>
-  <% end %>
+      <div class="btn">
+        <%= f.button :submit, "Update job offer !", class: 'btn-update-job-offer btn-primary' %>
+      </div>
+    <% end %>
+  </div>
 </div>
