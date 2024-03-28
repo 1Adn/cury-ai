@@ -26,4 +26,10 @@ Rails.application.routes.draw do
   resources :experiences, only: [:create, :update, :destroy]
   resources :degrees, only: [:create, :update, :destroy]
   resources :languages, only: [:create, :update, :destroy]
+
+    # Sidekiq Web UI, only for admins.
+    require "sidekiq/web"
+    authenticate :user, ->(user) { user.admin? } do
+      mount Sidekiq::Web => '/sidekiq'
+    end
 end
