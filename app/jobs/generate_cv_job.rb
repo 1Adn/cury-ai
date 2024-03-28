@@ -127,10 +127,12 @@ class GenerateCvJob < ApplicationJob
 -complete the HTML code with this experiences informations :
 #{got_experiences(cv_generation)}
 
-- create a small description of the person in the 'a propos' section
-all the skills, languages, degrees and experiences must be present
+- create a small description of the person in the 'a propos' section as him, don't write in the 3rd person.
+- all the skills, languages, degrees and experiences must be present
 Give me only the html code, nothing more.
-          "
+
+- now you can use this job offert informations to get the offer name for the cv:
+#{cv_generation.job_offer}"
       }]
     })
     response_content = chatgpt_response["choices"][0]["message"]["content"]
