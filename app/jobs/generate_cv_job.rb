@@ -134,7 +134,12 @@ Give me only the html code, nothing more.
       }]
     })
     response_content = chatgpt_response["choices"][0]["message"]["content"]
-    return response_content
+    user = cv_generation.profile.user
+    new_cv = Cv.new(content: response_content)
+    new_cv.user = user
+    new_cv.cv_generation = cv_generation
+    new_cv.save
+    p new_cv
   end
 
 
