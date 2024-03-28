@@ -1,6 +1,7 @@
 <div data-controller="refresh-show-cv">
   <% if @cv.present?%>
     <div data-refresh-show-cv-target="cv">
+      <%# <%= link_to "Download this CV !", download_cv_path, class: "btn btn-primary" %> %>
       <%== @cv.content %>
     </div>
   <% else %>
