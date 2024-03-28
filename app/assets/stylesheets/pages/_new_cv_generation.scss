@@ -149,11 +149,15 @@
     font-family: "Helvetica Neue, "Helvetica", ""arial";
     font-size: 20px;
     font-weight: bold;
-    margin-top: 520px;
     opacity: 0;
     position: absolute;
+    top: 58%; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%); /* Alignement parfait au centre */
+    color: white;
+    font-size: 18px;
     text-align: center;
+    z-index: 1;
     text-transform: uppercase;
-    top: 0;
     width: 100px;
 }
