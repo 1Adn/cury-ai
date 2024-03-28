@@ -1,0 +1,72 @@
+.footer {
+  background-color: #000000; /* Or any color that matches your design */
+  color: #ffffff; /* Adjust the color to match your design */
+  padding: 1rem 0;
+  font-family: Arial, sans-serif; /* Use your preferred font */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%; /* Adjust padding and width according to your design */
+}
+
+.footer-brand a {
+  font-size: 1.5rem; /* Larger font size for the brand */
+  color: #ffffff; /* Adjust brand color */
+  text-decoration: none;
+}
+
+.footer-links a,
+.footer-socials a {
+  color: #ffffff; /* Adjust link color */
+  text-decoration: none;
+  margin-right: 1rem; /* Spacing between links */
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+  text-decoration: underline; /* Hover effect for links */
+}
+
+.footer-socials a {
+  font-size: 1.2rem; /* Adjust font size for social icons */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 10%; /* Adjust padding and width according to your design */
+  border-top: 1px solid #ccc; /* Light border for the bottom area */
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-policy a {
+  margin-right: 1rem; /* Spacing between policy links */
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+  .footer-content, .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links, .footer-socials, .footer-policy {
+    margin-bottom: 1rem;
+  }
+
+  .footer-links a,
+  .footer-socials a,
+  .footer-policy a {
+    margin-right: 0;
+    margin-bottom: 0.5rem; /* Add some space below each link on smaller screens */
+  }
+}
+
+
