@@ -1,0 +1,23 @@
+.cv-container {
+  position: relative;
+}
+
+.refresh-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: violet;
+  border: none;
+}
+
+.refresh-button::after {
+  content: "\f021"; /* Ajouter un symbole à l'intérieur du bouton (ici, une icône) */
+  font-family: FontAwesome; /* Utiliser une police d'icônes (par exemple, Font Awesome) */
+  font-size: 24px;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+}
