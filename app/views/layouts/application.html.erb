@@ -5,44 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body><%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-
     <%= yield %>
-
-   <!--  <p class="notice"><%= notice %></p>-->
+    <!--  <p class="notice"><%= notice %></p>-->
     <p class="alert"><%= alert %></p>
-
-
     <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-brand">
-      <a href="/">CuryAi</a>
-    </div>
-    <div class="footer-links">
-      <a href="/about">About</a>
-      <a href="/features">Features</a>
-      <a href="/works">Works</a>
-      <a href="/support">Support</a>
-    </div>
-    <div class="footer-socials">
-      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© Copyright 2024, All Rights Reserved</p>
-    <div class="footer-policy">
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms & Conditions</a>
-    </div>
-  </div>
-</footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/">CuryAi</a>
+        </div>
+        <div class="footer-links">
+          <a href="/about">About</a>
+          <a href="/features">Features</a>
+          <a href="/works">Works</a>
+          <a href="/support">Support</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Copyright 2024, All Rights Reserved</p>
+        <p>Made by 3 great Ingeneers, Adrien, Martin and Yannis</p>
+        <div class="footer-policy">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms & Conditions</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

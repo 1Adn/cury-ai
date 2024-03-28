@@ -32,4 +32,6 @@ Rails.application.routes.draw do
     authenticate :user, ->(user) { user.admin? } do
       mount Sidekiq::Web => '/sidekiq'
     end
+
+  # get 'cv/download', to: 'cv#download', as: 'download_cv'
 end
