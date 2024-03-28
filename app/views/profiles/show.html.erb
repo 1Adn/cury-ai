@@ -41,7 +41,7 @@
           <p> <strong> Email </strong> <%= @profile.email %></p>
           <p> <strong> Photo </strong>
             <% if @profile.photo.attached? %>
-              <%= image_tag(@profile.photo, alt: "Description of the image") %>
+              <%= image_tag(@profile.photo, alt: "Description of the image", class: "photo-avatar-edit") %>
             <% end %>
           </p>
         </div>

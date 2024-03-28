@@ -21,26 +21,27 @@
     <!-- Profile Section -->
     <section id="profile" class="dashboard-section" data-dashboard-target="section">
       <div class="h2-dash">
-        <h2>Your Profile</h2>
+        <h2>Contact informations</h2>
       </div>
       <!-- The rest of your profile content -->
       <% if @profile %>
         <div class="contact-infos">
           <h4>Contact informations</h4>
           <div class="contact-list">
-            <p><strong>First name: </strong><%= @profile.first_name %></p>
-            <p><strong>Last name: </strong><%= @profile.last_name %></p>
-            <p><strong>Address: </strong><%= @profile.address %></p>
-            <p><strong>Age: </strong><%= @profile.age %></p>
-            <p><strong>Phone number: </strong><%= @profile.phone_number %></p>
-            <p><strong>@email: </strong><%= @profile.email %></p>
+            <p><strong>First name </strong><%= @profile.first_name %></p>
+            <p><strong>Last name </strong><%= @profile.last_name %></p>
+            <p><strong>Address </strong><%= @profile.address %></p>
+            <p><strong>Age </strong><%= @profile.age %></p>
+            <p><strong>Phone number </strong><%= @profile.phone_number %></p>
+            <p><strong>@email </strong><%= @profile.email %></p>
+            <p><strong>photo </strong><%= image_tag(@profile.photo, alt: "Description of the image", class: "photo-avatar-edit") %></p>
           </div>
         </div>
       </section>
       <!-- Experiences Section -->
       <section id="experiences" class="dashboard-section" data-dashboard-target="section">
         <div class="h2-dash">
-          <h2>Work experiences</h2>
+          <h2>Professional experiences</h2>
         </div>
         <!-- The rest of your experiences content -->
         <div class="accordion" id="experienceAccordion">
@@ -49,15 +50,15 @@
               <div class="accordion-item-dash">
                 <h2 class="accordion-header-dash" id="heading-dash<%= index %>">
                   <button id="boutton-accordion-dash" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExperience<%= index %>" aria-expanded="false" aria-controls="collapseExperience<%= index %>">
-                    Experience <%= index + 1 %>: <%= experience.title %>
+                    <%= experience.title %>
                   </button>
                 </h2>
                 <div id="collapseExperience<%= index %>" class="accordion-collapse collapse" aria-labelledby="headingExperience<%= index %>" data-bs-parent="#experienceAccordion">
                   <div class="accordion-body-dashboard">
-                    <div class="content-dash-accordion"><strong>Type:</strong> <%= experience.experience_type %><br></div>
-                    <div class="content-dash-accordion"><strong>Started:</strong> <%= experience.starting_date %><br></div>
-                    <div class="content-dash-accordion"><strong>Ended:</strong> <%= experience.ending_date %><br></div>
-                    <div class="content-dash-accordion"><strong>Description:</strong> <%= experience.description %></div>
+                    <div class="content-dash-accordion"><strong>Type</strong> <%= experience.experience_type %><br></div>
+                    <div class="content-dash-accordion"><strong>Started</strong> <%= experience.starting_date %><br></div>
+                    <div class="content-dash-accordion"><strong>Ended</strong> <%= experience.ending_date %><br></div>
+                    <div class="content-dash-accordion"><strong>Description</strong> <%= experience.description %></div>
                   </div>
                 </div>
               </div>
