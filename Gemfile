@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
-gem "sidekiq", "6.5.11"
+# gem "sidekiq", "6.5.11"
 gem "sidekiq-failures"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -60,7 +60,7 @@ group :development, :test do
   gem "dotenv-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
-  # gem "sidekiq", "7.2.2"
+  gem "sidekiq", "7.2.2"
 end
 
 group :development do
